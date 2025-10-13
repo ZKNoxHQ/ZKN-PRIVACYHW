@@ -1,0 +1,201 @@
+=== Lagrangian Interpolation Test for All Curves ===
+
+Random Polynomial Coefficients (< Baby Jubjub order):
+  Baby Jubjub order: 0x60c89ce5c263405370a08b6d0302b0bab3eedb83920ee0a677297dc392126f1
+  secret (a0):       0x5a9dbf2d452e38e4192c779fff7b385a7979fc94bd2b8faa4ae8d91bb632aae
+  a1:                0x412cb7518f940a9bb1a77499001f49131b1e0bcdd5bde8df9668ece701f08a1
+  a2:                0x3bdcd06f9441945014b99366790d4e14daffb02118a474846d4d5e06251184c
+
+
+================================================================================
+Baby Jubjub
+================================================================================
+
+Curve Parameters:
+  Order:   0x60c89ce5c263405370a08b6d0302b0bab3eedb83920ee0a677297dc392126f1
+  Modulus: 0x30644e72e131a029b85045b68181585d2833e84879b9709143e1f593f0000001
+
+Polynomial Setup:
+  P(x) = 0x5a9dbf2d452e38e4192c779fff7b385a7979fc94bd2b8faa4ae8d91bb632aae + 0x412cb7518f940a9bb1a77499001f49131b1e0bcdd5bde8df9668ece701f08a1*x + 0x3bdcd06f9441945014b99366790d4e14daffb02118a474846d4d5e06251184c*x^2
+  Threshold: 3 of 5
+
+Secret Shares and Public Keys:
+  Participant 1:
+    Secret share: 0x16160d22e43d5728fe4c68c572a26e0d07ba017c87702bc1604c2881b90fdb9
+    Pubkey.x:     0x1b7f5c7716e7b16afe3ee8df6c67c752f0acbdd00b58d3018b1a85664b44cf70
+    Pubkey.y:     0x203deea42659ac7f35fccc24aa37c5efc7efb3de096b59d3fb4ee277b3aad8a0
+  Participant 2:
+    Secret share: 0x4947fbf7abcf9e0e0cdf80b7d7e43fe94bf966a682fdb0e1504a33f4061015c
+    Pubkey.x:     0x207814b1a294e0f8b05bd876aaf3a59c1120fd4a767cf8d1f71a3151e1f55f0a
+    Pubkey.y:     0x2aa9c5df296cd007cb14b64d695fac10de69e81e2dab9ce56c844e8301f39365
+  Participant 3:
+    Secret share: 0x32a251e0171e8cec63a4a89d293b4c79de5a750b8bb65dbd2c8fffeb790e7b5
+    Pubkey.x:     0x4465aba68fe6cff26d7f89c67899280bd8a4d5056fc7cd53248487d2067871c
+    Pubkey.y:     0x24707353ae5d6d6d0204034ae92a31ac5aeed00e7ca06f0d0a9cbe5c4a8c58ab
+  Participant 4:
+    Secret share: 0x32edabc1e88d6417733c6be269aa447972cc082f33a912fb6c470a2ba41d7b5
+    Pubkey.x:     0x19ffeb351655c3290bd95e133dd452a1585854bd02582ca13ff5125aa245c1f1
+    Pubkey.y:     0x2a0e2b2982dfeb6e14aad6168321a0a2f372465b5930d7f73d0e5b67ac3e6f0f
+  Participant 5:
+    Secret share: 0x4a2a099d201c238f3ba6ca87993127e8094e20117ad5d09c0f6f52b4873d15c
+    Pubkey.x:     0xc6c5939c0d89b7d2d0cb44193296bca6d4c05d34abce93e4c3b444535ba2ab4
+    Pubkey.y:     0x2ecf9017d79f0c149b85e179b59203d4f3a23645b27648794226f577d08b4010
+
+Expected Group Public Key (secret * Base):
+  x: 0x2171a731c39017c4fd5d539e42971e63404cf063c5471eee547797fc9b0dfec0
+  y: 0x20b373cca053d51c55a7a0201bf5dfcbbb98efa3077f31e6ddc9f974c8a29312
+
+Test 1: Reconstruct with participants 1, 2, 3
+  Using IDs: [0x1, 0x2, 0x3]
+  Reconstructed.x: 0x2171a731c39017c4fd5d539e42971e63404cf063c5471eee547797fc9b0dfec0
+  Reconstructed.y: 0x20b373cca053d51c55a7a0201bf5dfcbbb98efa3077f31e6ddc9f974c8a29312
+  Match: ✓ PASS
+
+Test 2: Reconstruct with participants 2, 3, 4
+  Using IDs: [0x2, 0x3, 0x4]
+  Reconstructed.x: 0x2171a731c39017c4fd5d539e42971e63404cf063c5471eee547797fc9b0dfec0
+  Reconstructed.y: 0x20b373cca053d51c55a7a0201bf5dfcbbb98efa3077f31e6ddc9f974c8a29312
+  Match: ✓ PASS
+
+Test 3: Reconstruct with participants 1, 3, 5
+  Using IDs: [0x1, 0x3, 0x5]
+  Reconstructed.x: 0x2171a731c39017c4fd5d539e42971e63404cf063c5471eee547797fc9b0dfec0
+  Reconstructed.y: 0x20b373cca053d51c55a7a0201bf5dfcbbb98efa3077f31e6ddc9f974c8a29312
+  Match: ✓ PASS
+
+Test 4: Reconstruct with all 5 participants
+  Using IDs: [0x1, 0x2, 0x3, 0x4, 0x5]
+  Reconstructed.x: 0x2171a731c39017c4fd5d539e42971e63404cf063c5471eee547797fc9b0dfec0
+  Reconstructed.y: 0x20b373cca053d51c55a7a0201bf5dfcbbb98efa3077f31e6ddc9f974c8a29312
+  Match: ✓ PASS
+
+Baby Jubjub Summary: ✓ ALL TESTS PASSED
+
+================================================================================
+Ed25519
+================================================================================
+
+Curve Parameters:
+  Order:   0x1000000000000000000000000000000014def9dea2f79cd65812631a5cf5d3ed
+  Modulus: 0x7fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffed
+
+Polynomial Setup:
+  P(x) = 0x5a9dbf2d452e38e4192c779fff7b385a7979fc94bd2b8faa4ae8d91bb632aae + 0x412cb7518f940a9bb1a77499001f49131b1e0bcdd5bde8df9668ece701f08a1*x + 0x3bdcd06f9441945014b99366790d4e14daffb02118a474846d4d5e06251184c*x^2
+  Threshold: 3 of 5
+
+Secret Shares and Public Keys:
+  Participant 1:
+    Secret share: 0xd7a746ee6903d7cfdf8d7f9f78a7cf826f97b883ab8ded0e4e9f2408dd34b9b
+    Pubkey.x:     0x6dd5d21317794c634c0d32e2065a8fc14d2b89911ec81c71b192604ed1618b
+    Pubkey.y:     0x434da8fa7e6557c693b5e71be896fa7a64cedfd9d27cacb9a13708a02c33f065
+  Participant 2:
+    Secret share: 0xcc6a6f8eb55c9f5bcf61ae6be3ef02d2cdc536ca9bbf6615abc9f95c7efc933
+    Pubkey.x:     0x6718d28370f43b32141ab3377c30d31adb26c8fbd60189e7a17f86cbbc2e084e
+    Pubkey.y:     0x47807b7a34074735e9bf84acf96650f6440253d23d70f9ef760b1caf5f1714dd
+  Participant 3:
+    Secret share: 0x38e7390e2a388f87e8a904054150d24b940277698dbffac0626959169b8a376
+    Pubkey.x:     0x47d5f5a791b1ce0bd5879010581ebe4592ded05a906003bfad64e9165fe00fe
+    Pubkey.y:     0x544645b5e6a533d1f0708c41e6ff927fd62bd2d36610de72675220eeec1ed8b7
+  Participant 4:
+    Secret share: 0x1d1da36cc797a8542b63806b90cd3dee103f184ab1097873f3a374dd023ae51
+    Pubkey.x:     0x769fa3a4af4caea80cf6bdf339743dc4fedaa9a579d387391e29f92c0be44f67
+    Pubkey.y:     0x61292c87af283d08433de4baa3dfdd6ad1c844809c2a2c43642b32498ffa308d
+  Participant 5:
+    Secret share: 0x790daeaa8d79e9c09791239ed26445ba427b196e059bdf305f784cafb30e9c4
+    Pubkey.x:     0x585e6c34b705a92dd05551a04f41d06ea20c2a5fcc487c9d002d3b0a37c8b943
+    Pubkey.y:     0xeab6583774b2483996c3232ecf4ca47954f6bba2ab3deda85e3414ff9c91514
+
+Expected Group Public Key (secret * Base):
+  x: 0x50fa0f61ff789fdeef376fdffbf3077347db9e868dbc929dbedd24a0fe4d6b08
+  y: 0x779c84a17023e0b70d6369972a3f9d91d39c9c238644215800d7bfd5178ec906
+
+Test 1: Reconstruct with participants 1, 2, 3
+  Using IDs: [0x1, 0x2, 0x3]
+  Reconstructed.x: 0x50fa0f61ff789fdeef376fdffbf3077347db9e868dbc929dbedd24a0fe4d6b08
+  Reconstructed.y: 0x779c84a17023e0b70d6369972a3f9d91d39c9c238644215800d7bfd5178ec906
+  Match: ✓ PASS
+
+Test 2: Reconstruct with participants 2, 3, 4
+  Using IDs: [0x2, 0x3, 0x4]
+  Reconstructed.x: 0x50fa0f61ff789fdeef376fdffbf3077347db9e868dbc929dbedd24a0fe4d6b08
+  Reconstructed.y: 0x779c84a17023e0b70d6369972a3f9d91d39c9c238644215800d7bfd5178ec906
+  Match: ✓ PASS
+
+Test 3: Reconstruct with participants 1, 3, 5
+  Using IDs: [0x1, 0x3, 0x5]
+  Reconstructed.x: 0x50fa0f61ff789fdeef376fdffbf3077347db9e868dbc929dbedd24a0fe4d6b08
+  Reconstructed.y: 0x779c84a17023e0b70d6369972a3f9d91d39c9c238644215800d7bfd5178ec906
+  Match: ✓ PASS
+
+Test 4: Reconstruct with all 5 participants
+  Using IDs: [0x1, 0x2, 0x3, 0x4, 0x5]
+  Reconstructed.x: 0x50fa0f61ff789fdeef376fdffbf3077347db9e868dbc929dbedd24a0fe4d6b08
+  Reconstructed.y: 0x779c84a17023e0b70d6369972a3f9d91d39c9c238644215800d7bfd5178ec906
+  Match: ✓ PASS
+
+Ed25519 Summary: ✓ ALL TESTS PASSED
+
+================================================================================
+secp256k1
+================================================================================
+
+Curve Parameters:
+  Order:   0xfffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd0364141
+  Modulus: 0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffefffffc2f
+
+Polynomial Setup:
+  P(x) = 0x5a9dbf2d452e38e4192c779fff7b385a7979fc94bd2b8faa4ae8d91bb632aae + 0x412cb7518f940a9bb1a77499001f49131b1e0bcdd5bde8df9668ece701f08a1*x + 0x3bdcd06f9441945014b99366790d4e14daffb02118a474846d4d5e06251184c*x^2
+  Threshold: 3 of 5
+
+Secret Shares and Public Keys:
+  Participant 1:
+    Secret share: 0xd7a746ee6903d7cfdf8d7f9f78a7cf826f97b883ab8ded0e4e9f2408dd34b9b
+    Pubkey.x:     0x6e562e7e70707c68d4b1ebef1ab34573a3c3f23128ad8848825d3e34e23016ac
+    Pubkey.y:     0x5708bd007f9a3c6e0fd40c6f381c111396b80bd6245f12ec08e41f8a09b0664c
+  Participant 2:
+    Secret share: 0x1cc6a6f8eb55c9f5bcf61ae6be3ef02d41bb4d4b4cb39337b2cf02b024e59d20
+    Pubkey.x:     0xded66d52c0b462b7c1c5355972a353c1001568c809a3a672798170a3e0845997
+    Pubkey.y:     0x37b09d0d4d1d9ff392cede955a2ca22a010c880373bb8bb280dfbf401e653ad9
+  Participant 3:
+    Secret share: 0x338e7390e2a388f87e8a904054150d24f7dd151281c2d62f0e5dbee0809a1f3d
+    Pubkey.x:     0x28b5d90dad49fae481560c81f7ba78ef378f4394c09ae22fd59fa7d3c87a3fea
+    Pubkey.y:     0x8b19c24373bc5358704c4e18fee5192df6807986e10790916bad36c027ea8e10
+  Participant 4:
+    Secret share: 0x51d1da36cc797a8542b63806b90cd3df495ed2ddd9e6a7b6f79626d1a0f0d1f2
+    Pubkey.x:     0xd4b30a8bb8f62f4136b247ad2f0f6880b410ecb0cf86419de5f618e521f695c
+    Pubkey.y:     0xee776cc59851173ba17df8ff7f5b0ead1182dd80e8a06d73f8be5b26f4911ced
+  Participant 5:
+    Secret share: 0x7790daeaa8d79e9c09791239ed26445c364086ad551f07cf6e783a8385e9b53f
+    Pubkey.x:     0x548fa5c5d4c92d3c1196c451ed6efcc28a2a802b58e7cf43615f3e3c2fbaad2a
+    Pubkey.y:     0x69f4facc8c07acb97072e8f475e52eb9b586a120149c5a0f7e3fe5cb3e80ce01
+
+Expected Group Public Key (secret * Base):
+  x: 0xc7fd1479649d3c5d30d5c047b7a59d165d04075242e627056c4e343f2b1adaee
+  y: 0x6c12dc69be191ed0dafec932af7daceaf5fdb4683f05395d1e4d10890ac57804
+
+Test 1: Reconstruct with participants 1, 2, 3
+  Using IDs: [0x1, 0x2, 0x3]
+  Reconstructed.x: 0xc7fd1479649d3c5d30d5c047b7a59d165d04075242e627056c4e343f2b1adaee
+  Reconstructed.y: 0x6c12dc69be191ed0dafec932af7daceaf5fdb4683f05395d1e4d10890ac57804
+  Match: ✓ PASS
+
+Test 2: Reconstruct with participants 2, 3, 4
+  Using IDs: [0x2, 0x3, 0x4]
+  Reconstructed.x: 0xc7fd1479649d3c5d30d5c047b7a59d165d04075242e627056c4e343f2b1adaee
+  Reconstructed.y: 0x6c12dc69be191ed0dafec932af7daceaf5fdb4683f05395d1e4d10890ac57804
+  Match: ✓ PASS
+
+Test 3: Reconstruct with participants 1, 3, 5
+  Using IDs: [0x1, 0x3, 0x5]
+  Reconstructed.x: 0xc7fd1479649d3c5d30d5c047b7a59d165d04075242e627056c4e343f2b1adaee
+  Reconstructed.y: 0x6c12dc69be191ed0dafec932af7daceaf5fdb4683f05395d1e4d10890ac57804
+  Match: ✓ PASS
+
+Test 4: Reconstruct with all 5 participants
+  Using IDs: [0x1, 0x2, 0x3, 0x4, 0x5]
+  Reconstructed.x: 0xc7fd1479649d3c5d30d5c047b7a59d165d04075242e627056c4e343f2b1adaee
+  Reconstructed.y: 0x6c12dc69be191ed0dafec932af7daceaf5fdb4683f05395d1e4d10890ac57804
+  Match: ✓ PASS
+
+secp256k1 Summary: ✓ ALL TESTS PASSED
+
