@@ -1,0 +1,186 @@
+────────────────────────────────────────────────────────────────────────────────
+────────────────────────────────────────────────────────────────────────────────
+*********************************** FIRST SEQUENCE
+────────────────────────────────────────────────────────────────────────────────
+────────────────────────────────────────────────────────────────────────────────
+
+=== EdDSA Poseidon Complete Test ===
+
+Step 1: Key Generation
+────────────────────────────────────────────────────────────────────────────────
+Private key: 00a2ac13cdba830a55bf407ea70c5fd29312c17060f07d35fea5de47d6c03ed2
+Private key MSB: 0x00 (< 0x03)
+Public key X: 07d7c929012d008477b17014223e9b706b6ba225e66a59a250352cf0d39d55b6
+Public key Y: 2b6ac5eb5978a9260c0da1219336c639e186f7587a1c8640c22ab40fa98f4718
+
+Step 2: Signing
+────────────────────────────────────────────────────────────────────────────────
+Message: 35e85c3a8b07bd7c9966920e214c040cf50e2fc3bb1accffc0521d1661261f8d
+
+=== EdDSA Poseidon Signature Generation ===
+Private key: 0x00a2ac13cdba830a55bf407ea70c5fd29312c17060f07d35fea5de47d6c03ed2
+
+Step 1: BLAKE512 hash and prune
+  sBuff (pruned): 0x2021efa13bcb62a5d6b3bc1ed07d5e0f6d27b08d49ffe89ad23b4325f029d071f3eb5e032737c0c86af52062eaf514fff7ff00966537e870bde48736ca68b103
+
+Step 2: Derive scalar s
+  s: 0x71d029f025433bd29ae8ff498db0276d0f5e7dd01ebcb3d6a562cb3ba1ef2120
+
+Step 2.1: Derive scalar s, shr3
+  s: 0x0e3a053e04a8677a535d1fe931b604eda1ebcfba03d7967ad4ac5967743de424
+        
+Step 3: Compute public key A
+  A[0]: 0x07d7c929012d008477b17014223e9b706b6ba225e66a59a250352cf0d39d55b6
+  A[1]: 0x2b6ac5eb5978a9260c0da1219336c639e186f7587a1c8640c22ab40fa98f4718
+
+Step 4: Compose buffer for r
+  composeBuff: 0xf3eb5e032737c0c86af52062eaf514fff7ff00966537e870bde48736ca68b1038c1f26718227707c6e5c61417b47daccafabca9f574c16e1521dd6a9c70d8405
+
+Step 5: Compute r
+  rBuff: 0x22883b3b263ef635ea1f266049a43a451bd8f7c935fedaf3b10f117fc6c1ff9a3d0f23bc10ec6794022b4b5e5f09d2ba956dd5f11a1ae3ad4047a6d96172bd8f
+  r (mod subOrder): 0x05a0c09156838b9828af3f1267e175e6e284c79d1b6d8ad0cd0ae0d95790336e
+
+Step 6: Compute R8 = Base8 * r
+  R8[0]: 0x27ba1384a887c1778a9caeb09956a9ebaf5f0bd46cb124d8c0532fc87c3f6572
+  R8[1]: 0x0171b046f31be4ee7267813b0f9068367bf6c99233ea48c171a536e795197a53
+
+Step 7: Compute Poseidon hash
+  Inputs to Poseidon:
+    R8[0]: 0x27ba1384a887c1778a9caeb09956a9ebaf5f0bd46cb124d8c0532fc87c3f6572
+    R8[1]: 0x0171b046f31be4ee7267813b0f9068367bf6c99233ea48c171a536e795197a53
+    A[0]: 0x07d7c929012d008477b17014223e9b706b6ba225e66a59a250352cf0d39d55b6
+    A[1]: 0x2b6ac5eb5978a9260c0da1219336c639e186f7587a1c8640c22ab40fa98f4718
+    msg: 0x05840dc7a9d61d52e1164c579fcaabafccda477b41615c6e7c70278271261f8c
+  Poseidon hash (hm): 0x02630ac347a1542b7fdef546ef6b6f6bd6b89874e4ee06051fe1e4b241e35bbe
+  hms (as scalar): 0x02630ac347a1542b7fdef546ef6b6f6bd6b89874e4ee06051fe1e4b241e35bbe
+
+Step 8: Compute S = r + hms * s (mod subOrder)
+  hms * s: 0x10fa89d0b34b7d06924d6610292c3892667de3d578a72901659b130139cdff32567554eed5a348cea02427a0bdb24e167a2f5a3bf379bcbc674df85afa0f5c0 //0x581fb4a6e4ab5a8120b8226df951e10d794d8b7705d1fb36b998eb91a4b38e5 mod q
+  r + hms * s: 0x10fa89d0b34b7d06924d6610292c3892667de3d578a72901659b130139cdff32b0815e043ddc02512b1818c73bc9ac84a27bd40daa5269c937fc05f0731292e
+  S (final): 0x0516320d68a80d3b03b0b882774668ec0edab29c52a9bc79d131d7b638ba4562
+
+=== Signature Complete ===
+
+
+Signature (readable format):
+  R8[0]: 27ba1384a887c1778a9caeb09956a9ebaf5f0bd46cb124d8c0532fc87c3f6572
+  R8[1]: 0171b046f31be4ee7267813b0f9068367bf6c99233ea48c171a536e795197a53
+  S: 0516320d68a80d3b03b0b882774668ec0edab29c52a9bc79d131d7b638ba4562
+
+Step 3: Verification
+────────────────────────────────────────────────────────────────────────────────
+Verification result: ✓ PASS
+
+Step 4: Pack/Unpack Signature
+────────────────────────────────────────────────────────────────────────────────
+Packed signature: 537a1995e736a571c148ea3392c9f67b3668900f3b816772eee41bf346b071816245ba38b6d731d179bca9529cb2da0eec68467782b8b0033b0da8680d321605
+Packed signature length: 64 bytes
+Unpacked signature verification: ✓ PASS
+
+================================================================================
+✓ All tests passed!
+
+  q=0x60c89ce5c263405370a08b6d0302b0bab3eedb83920ee0a677297dc392126f1
+  s=0x71d029f025433bd29ae8ff498db0276d0f5e7dd01ebcb3d6a562cb3ba1ef2120
+  hms=0x02630ac347a1542b7fdef546ef6b6f6bd6b89874e4ee06051fe1e4b241e35bbe
+  r=0x05a0c09156838b9828af3f1267e175e6e284c79d1b6d8ad0cd0ae0d95790336e
+
+
+
+  060c89ce5c263405370a08b6d0302b0bab3eedb83920ee0a677297dc392126f1
+  ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+  0581fb4a6e4ab5a8120b8226df951e10d794d8b7705d1fb36b998eb91a4b38e5
+  ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+  05a0c09156838b9828af3f1267e175e6e284c79d1b6d8ad0cd0ae0d95790336e
+  ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+  0b22bbdbc4ce41403abac139477693f7ba19a0548bcaaa8438a46f9271db6c53
+  ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff9000
+
+
+
+
+
+────────────────────────────────────────────────────────────────────────────────
+────────────────────────────────────────────────────────────────────────────────
+*********************************** SECOND SEQUENCE
+────────────────────────────────────────────────────────────────────────────────
+────────────────────────────────────────────────────────────────────────────────
+
+=== EdDSA Poseidon Complete Test ===
+
+Step 1: Key Generation
+────────────────────────────────────────────────────────────────────────────────
+Private key: 00be1aec3e4d7c893e04a0d8928e89d9e3108a63c0935df1b61a6d8e578ad983
+Private key MSB: 0x00 (< 0x03)
+Public key X: 0662c3ab283f00dae3986304a4fdce1864219d0d27808ac9d17ca3bab5295b70
+Public key Y: 0fef65c20f3ce17014d78898be3674f474cd85ac7a11a81c9663c7c4f0ae33d8
+
+Step 2: Signing
+────────────────────────────────────────────────────────────────────────────────
+Message: 00927a7d19e4a0018a5ceeb01608f178b5dbc836f783fc7162e7e283059727a5
+Montgomery (hex): a527970583e2e76271fc83f736c8dbb578f10816b0ee5c8a01a0e4197d7a9200
+APDU: e00c0000410200be1aec3e4d7c893e04a0d8928e89d9e3108a63c0935df1b61a6d8e578ad983a527970583e2e76271fc83f736c8dbb578f10816b0ee5c8a01a0e4197d7a9200
+
+
+=== EdDSA Poseidon Signature Generation ===
+Private key: 0x00be1aec3e4d7c893e04a0d8928e89d9e3108a63c0935df1b61a6d8e578ad983
+
+Step 1: BLAKE512 hash and prune
+  sBuff (pruned): 0x9074d09c88d6279c281470322a801b7126a93dae960215ecb65c409ad999b27e0843a7c0ebb411c63d259bddcc71f22bd4075bccd6672572c637a3c106fd78d2
+
+Step 2: Derive scalar s
+  s: 0x7eb299d99a405cb6ec150296ae3da926711b802a327014289c27d6889cd07490
+
+Step 2.1: Derive scalar s, shr3
+  s: 0x0fd6533b33480b96dd82a052d5c7b524ce237005464e02851384fad1139a0e92
+
+Step 3: Compute public key A
+  A[0]: 0x0662c3ab283f00dae3986304a4fdce1864219d0d27808ac9d17ca3bab5295b70
+  A[1]: 0x0fef65c20f3ce17014d78898be3674f474cd85ac7a11a81c9663c7c4f0ae33d8
+
+Step 4: Compose buffer for r
+  composeBuff: 0x0843a7c0ebb411c63d259bddcc71f22bd4075bccd6672572c637a3c106fd78d2a527970583e2e76271fc83f736c8dbb578f10816b0ee5c8a01a0e4197d7a9200
+
+Step 5: Compute r
+  rBuff: 0x57f88f8834e4a1849808e4e76d2a5fbefe9b066ce4a6d2a5ffbc3d357db1350ed25825b25da97beefd54a6da352c4d4b62fc29eafe5822fdd9ceee102205813c
+  r (mod subOrder): 0x02eacbcacf54a809ea9299c97ee7abc25a1da1f5f7671204e223907a8ab45420
+
+Step 6: Compute R8 = Base8 * r
+  R8[0]: 0x26e2d344f7d87a6970d6947ad54163087ed7081b0257ffd11c0e9ab8f5fc1ffc
+  R8[1]: 0x1202ca1cb5e7dc4f83c23fd21d72203c8c568f5872047e99885a92d36fa27001
+
+Step 7: Compute Poseidon hash
+  Inputs to Poseidon:
+    R8[0]: 0x26e2d344f7d87a6970d6947ad54163087ed7081b0257ffd11c0e9ab8f5fc1ffc
+    R8[1]: 0x1202ca1cb5e7dc4f83c23fd21d72203c8c568f5872047e99885a92d36fa27001
+    A[0]: 0x0662c3ab283f00dae3986304a4fdce1864219d0d27808ac9d17ca3bab5295b70
+    A[1]: 0x0fef65c20f3ce17014d78898be3674f474cd85ac7a11a81c9663c7c4f0ae33d8
+    msg: 0x00927a7d19e4a0018a5ceeb01608f178b5dbc836f783fc7162e7e283059727a5
+  Poseidon hash (hm): 0x27026f9f4f6d154a082de39f0807f7868c9a5aa31cc134e8ed6ce634818c06aa
+  hms (as scalar): 0x27026f9f4f6d154a082de39f0807f7868c9a5aa31cc134e8ed6ce634818c06aa
+
+Step 8: Compute S = r + hms * s (mod subOrder)
+  hms * s: 0x134e6a13a32504b8401e18f56d3ca9b58262d7817ebb92f043595a99e25db4216511b0b968a2b7b211d3839b0dc36f49707d88de2e9826826b07846153e8c7a0
+  r + hms * s: 0x134e6a13a32504b8401e18f56d3ca9b58262d7817ebb92f043595a99e25db42167fc7c8437f75fbbfc661d648cab1b0bca9b2ad425ff38874d2b14dbde9d1bc0
+  S (final): 0x04fb632ee85d31956013c16f51c35725478d670d21579479a86716de18a7a95a
+
+=== Signature Complete ===
+
+
+Signature (readable format):
+  R8[0]: 26e2d344f7d87a6970d6947ad54163087ed7081b0257ffd11c0e9ab8f5fc1ffc
+  R8[1]: 1202ca1cb5e7dc4f83c23fd21d72203c8c568f5872047e99885a92d36fa27001
+  S: 04fb632ee85d31956013c16f51c35725478d670d21579479a86716de18a7a95a
+
+Step 3: Verification
+────────────────────────────────────────────────────────────────────────────────
+Verification result: ✓ PASS
+
+Step 4: Pack/Unpack Signature
+────────────────────────────────────────────────────────────────────────────────
+Packed signature: 0170a26fd3925a88997e0472588f568c3c20721dd23fc2834fdce7b51cca02925aa9a718de1667a8799457210d678d472557c3516fc1136095315de82e63fb04
+Packed signature length: 64 bytes
+Unpacked signature verification: ✓ PASS
+
+================================================================================
+✓ All tests passed!

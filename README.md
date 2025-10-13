@@ -1,6 +1,6 @@
 #  ZKN-PRIVACYHW
 
-Tools to protect the private element from malware when signing using eddsa-poseidon over baby-jujub curve.
+Tools to protect the private element from malware with a hardware wallet when signing using eddsa-poseidon over baby-jujub curve.
 
 
 ## SIDELOADING THE APP
