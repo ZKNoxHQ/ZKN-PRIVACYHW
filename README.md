@@ -85,7 +85,7 @@ e00c00004102 | prv(32) | msg(32)
 
 The keygen actually uses a hardcoded private key, every nano uses the same for now. (see warning).
 
-The code is compliant with the python reference code (ethdilithium) and NIST KATS (for dilithium) 
+The code is compliant with the python reference code (ethdilithium) and NIST KATS (for dilithium) of ZKNOXHQ [ETHDILITHIUM](https://github.com/ZKNoxHQ/ETHDILITHIUM/tree/main/src) repository.
 
 ### DILITHIUM GETKEY
 
