@@ -35,7 +35,7 @@ dilithium: 81e7f731913b013c49de598bfe471ad5fc57af004d15c5d33de160c851eca5b5
 
 ethdilithium: 8407bd17ed3ae26c74f4634bd68deb0e7d1d1b5c5133562f9062ad664cb7b794
 
-eddsaposeidon: 
+eddsaposeidon: 00de7911c076d3e4f6180de947af6bb2950722f3afe5729326d3ce3fe26c164a
 
 ## SENDING COMMAND TO THE LEDGER DEVICE
 
