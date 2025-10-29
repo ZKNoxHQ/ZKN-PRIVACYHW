@@ -4,8 +4,9 @@
 //
 const TransportNodeHid = require("@ledgerhq/hw-transport-node-hid").default;
 
+const fs = require('fs');
+
 async function DilithiumSign(message) {
-  console.time("Dilithium");
   let transport;
   try {
     // List available devices
@@ -39,7 +40,6 @@ async function DilithiumSign(message) {
 
     // 2. Absorb commands for each chunk
     chunks.forEach((chunk, index) => {
-      console.log("chunk:", chunk);
       const length = chunk.length.toString(16).padStart(2, '0');
       const chunkHex = chunk.toString('hex');
       const command = `e00f0100${length}${chunkHex}`;
@@ -58,7 +58,6 @@ async function DilithiumSign(message) {
 
       const apduBuffer = Buffer.from(command, "hex");
 
-      console.time("BenchAPDU")
       try {
         const response = await transport.exchange(apduBuffer);
         const responseHex = response.toString("hex");
@@ -69,15 +68,12 @@ async function DilithiumSign(message) {
         // console.log("Data:", data);
         // console.log("Status Word:", statusWord);
 
-        if (statusWord === "9000") {
-          console.log("✅ APDU executed successfully");
-        } else {
+        if (statusWord !== "9000") {
           console.log("❌ Error - Status Word:", statusWord);
         }
       } catch (err) {
         console.error(`❌ Error sending APDU (${name}):`, err.message);
       }
-      console.timeEnd("BenchAPDU")
     }
 
     // 4. Retrieve signature chunks from RAM
@@ -104,8 +100,6 @@ async function DilithiumSign(message) {
 
       const apduBuffer = Buffer.from(command, "hex");
 
-      console.time("BenchAPDU")
-
       try {
         const response = await transport.exchange(apduBuffer);
         const responseHex = response.toString("hex");
@@ -117,20 +111,16 @@ async function DilithiumSign(message) {
         // console.log("Status Word:", statusWord);
         sigHex += data;
 
-        if (statusWord === "9000") {
-          console.log("✅ APDU executed successfully");
-        } else {
+        if (statusWord !== "9000") {
           console.log("❌ Error - Status Word:", statusWord);
         }
       } catch (err) {
         console.error(`❌ Error sending APDU (${name}):`, err.message);
       }
-      console.timeEnd("BenchAPDU")
     }
 
-    sigHex += message;
+    // sigHex += message;
     console.log("DILITHIUM SIGNATURE:", sigHex);
-    console.timeEnd("Dilithium");
 
 
     // Get public key
@@ -151,8 +141,6 @@ async function DilithiumSign(message) {
 
       const apduBuffer = Buffer.from(command, "hex");
 
-      console.time("BenchAPDU")
-
       try {
         const response = await transport.exchange(apduBuffer);
         const responseHex = response.toString("hex");
@@ -164,19 +152,25 @@ async function DilithiumSign(message) {
         // console.log("Status Word:", statusWord);
         pubKeyHex += data;
 
-        if (statusWord === "9000") {
-          console.log("✅ APDU executed successfully");
-        } else {
+        if (statusWord !== "9000") {
           console.log("❌ Error - Status Word:", statusWord);
         }
       } catch (err) {
         console.error(`❌ Error sending APDU (${name}):`, err.message);
       }
-      console.timeEnd("BenchAPDU")
     }
 
     console.log("DILITHIUM PUBLIC KEY:", pubKeyHex);
-    console.timeEnd("Dilithium");
+
+
+    console.log("WRITE INTO A JSON FILE");
+    const data = {
+      pk: pubKeyHex,
+      sig: sigHex,
+      msg: message
+    };
+    const jsonString = JSON.stringify(data, null, 2);
+    fs.writeFileSync('data.json', jsonString);
 
   } catch (error) {
     console.error("Error with Ledger transport:", error.message);
