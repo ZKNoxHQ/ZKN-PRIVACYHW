@@ -23,14 +23,12 @@ async function DilithiumSign(message) {
 
     // Convert message to Buffer if it's a string
     const msgBuffer = Buffer.isBuffer(message) ? message : Buffer.from(message, 'hex');
-    console.log(`\nMessage length: ${msgBuffer.length} bytes`);
 
     // Chunk the message into 255-byte pieces
     const chunks = [];
     for (let i = 0; i < msgBuffer.length; i += 255) {
       chunks.push(msgBuffer.slice(i, i + 255));
     }
-    console.log(`Message split into ${chunks.length} chunk(s)`);
 
     // Build APDU list for signing
     const apdus = [];
@@ -119,11 +117,9 @@ async function DilithiumSign(message) {
       }
     }
 
-    // sigHex += message;
-    console.log("DILITHIUM SIGNATURE:", sigHex);
+    // 5. Retrieve public key chunks from RAM
+    console.log("\n========== RETRIEVING PUBLIC KEY ==========");
 
-
-    // Get public key
     // Build APDU list for retrieving public key of 1312 bytes: 0xff * 5 + 0x25 
     const apdus3 = [];
     apdus3.push({ name: "apdu_dilithium_get_pk_chunk_1", command: "e01300ff00" });
@@ -160,17 +156,13 @@ async function DilithiumSign(message) {
       }
     }
 
-    console.log("DILITHIUM PUBLIC KEY:", pubKeyHex);
-
-
-    console.log("WRITE INTO A JSON FILE");
     const data = {
       pk: pubKeyHex,
       sig: sigHex,
       msg: message
     };
     const jsonString = JSON.stringify(data, null, 2);
-    fs.writeFileSync('data.json', jsonString);
+    fs.writeFileSync('data_dilithium.json', jsonString);
 
   } catch (error) {
     console.error("Error with Ledger transport:", error.message);

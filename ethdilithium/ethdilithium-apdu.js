@@ -162,7 +162,7 @@ async function DilithiumSign(message) {
       msg: message
     };
     const jsonString = JSON.stringify(data, null, 2);
-    fs.writeFileSync('data_dilithium.json', jsonString);
+    fs.writeFileSync('data_ethdilithium.json', jsonString);
 
   } catch (error) {
     console.error("Error with Ledger transport:", error.message);
