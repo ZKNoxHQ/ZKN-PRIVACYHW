@@ -175,15 +175,11 @@ Result should looks like:
 
 ## NOTES
 
-- For now, as the secret key is passed in the command, no additional security is gained using the Ledger. This require to add a key derivation to be implemented. This only illustrate the feasibility to replace the witness generation of circomlib/gnark.
+- For now, as the secret key is either passed in the command or derived from a public element, so no additional security is gained using the Ledger. This requires to add a key derivation to be implemented. This only illustrate the feasibility to replace the witness generation of circomlib/gnark.
 - Code is still WIP, it will be opened when cleaned. Don't be stupid, do not use a closed unaudited code to protect funds. This work is for privacy experiments only.
-
 
 
 ## FUTURE DEVELOPMENTS
 
 - Integrate with libMPC, a Musig2/FROST implementation to provide multisig/threshold signature capacity
-- Integrate Bandersnatch to increase security level
-- Use derivation path to provide unique per Ledger secret key
-
-
+- Integrate Bandersnatch to fit with PECTRA update
