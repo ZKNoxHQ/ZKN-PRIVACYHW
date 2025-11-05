@@ -27,7 +27,7 @@ async function SignWithSecret() {
 
     // 1. Init command
     apdus.push({ name: "apdu_get_seed", command: "E016000015058000002c80002373800000000000000000000000" });
-    apdus.push({ name: "apdu_get_seed", command: "E017000021020027970583e2e76271fc83f736c8dbb578f10816b0ee5c8a01a0e4197d7a9200" });
+    apdus.push({ name: "apdu_sign", command: "E017000021020027970583e2e76271fc83f736c8dbb578f10816b0ee5c8a01a0e4197d7a9200" });
 
 
     // Execute all signing APDUs
