@@ -2,7 +2,7 @@
        0        0        0     1 PAGE_SIZE = 512
        0        0        0     1 STACK_MIN_SIZE = DEFINED ( stack_min_size ) ? stack_min_size : 1500
        0        0        0     1 END_STACK = ORIGIN ( SRAM ) + LENGTH ( SRAM )
-c0de0000 c0de0000     8e88     8 .text
+c0de0000 c0de0000     8e3f     8 .text
 c0de0000 c0de0000        0     1         _text = .
 c0de0000 c0de0000        0     1         _nvram_start = .
 c0de0000 c0de0000       28     2         build/nanos2/obj/sdk/lib_standard_app/main.o:(.boot)
@@ -1323,114 +1323,114 @@ c0de77c4 c0de77c4       26     2         /opt/nanosplus-secure-sdk/arch/st33k1/l
 c0de77c4 c0de77c4        0     1                 $t
 c0de77c5 c0de77c5       26     1                 strncpy
 c0de77ea c0de77ea        0     1         _ecode = .
-c0de77ea c0de77ea       16     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_home_zknox_14px_bitmap)
-c0de77ea c0de77ea       16     1                 C_home_zknox_14px_bitmap
-c0de7800 c0de7800        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_home_zknox_14px)
-c0de7800 c0de7800        a     1                 C_home_zknox_14px
-c0de780a c0de780a       19     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_Information_circle_14px_bitmap)
-c0de780a c0de780a       19     1                 C_Information_circle_14px_bitmap
-c0de7823 c0de7823        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_Information_circle_14px)
-c0de7823 c0de7823        a     1                 C_Information_circle_14px
-c0de782d c0de782d       19     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_Quit_14px_bitmap)
-c0de782d c0de782d       19     1                 C_Quit_14px_bitmap
-c0de7846 c0de7846        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_Quit_14px)
-c0de7846 c0de7846        a     1                 C_Quit_14px
-c0de7850 c0de7850        c     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_Switch_Off_8px_bitmap)
-c0de7850 c0de7850        c     1                 C_Switch_Off_8px_bitmap
-c0de785c c0de785c        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_Switch_Off_8px)
-c0de785c c0de785c        a     1                 C_Switch_Off_8px
-c0de7866 c0de7866        c     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_Switch_On_8px_bitmap)
-c0de7866 c0de7866        c     1                 C_Switch_On_8px_bitmap
-c0de7872 c0de7872        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_Switch_On_8px)
-c0de7872 c0de7872        a     1                 C_Switch_On_8px
-c0de787c c0de787c       19     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_back_x_bitmap)
-c0de787c c0de787c       19     1                 C_icon_back_x_bitmap
-c0de7895 c0de7895        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_back_x)
-c0de7895 c0de7895        a     1                 C_icon_back_x
-c0de789f c0de789f       19     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_coggle_bitmap)
-c0de789f c0de789f       19     1                 C_icon_coggle_bitmap
-c0de78b8 c0de78b8        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_coggle)
-c0de78b8 c0de78b8        a     1                 C_icon_coggle
-c0de78c2 c0de78c2       19     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_crossmark_bitmap)
-c0de78c2 c0de78c2       19     1                 C_icon_crossmark_bitmap
-c0de78db c0de78db        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_crossmark)
-c0de78db c0de78db        a     1                 C_icon_crossmark
-c0de78e5 c0de78e5        4     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_down_bitmap)
-c0de78e5 c0de78e5        4     1                 C_icon_down_bitmap
-c0de78e9 c0de78e9        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_down)
-c0de78e9 c0de78e9        a     1                 C_icon_down
-c0de78f3 c0de78f3        4     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_left_bitmap)
-c0de78f3 c0de78f3        4     1                 C_icon_left_bitmap
-c0de78f7 c0de78f7        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_left)
-c0de78f7 c0de78f7        a     1                 C_icon_left
-c0de7901 c0de7901       19     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_processing_bitmap)
-c0de7901 c0de7901       19     1                 C_icon_processing_bitmap
-c0de791a c0de791a        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_processing)
-c0de791a c0de791a        a     1                 C_icon_processing
-c0de7924 c0de7924        4     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_right_bitmap)
-c0de7924 c0de7924        4     1                 C_icon_right_bitmap
-c0de7928 c0de7928        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_right)
-c0de7928 c0de7928        a     1                 C_icon_right
-c0de7932 c0de7932        4     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_up_bitmap)
-c0de7932 c0de7932        4     1                 C_icon_up_bitmap
-c0de7936 c0de7936        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_up)
-c0de7936 c0de7936        a     1                 C_icon_up
-c0de7940 c0de7940       17     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_validate_14_bitmap)
-c0de7940 c0de7940       17     1                 C_icon_validate_14_bitmap
-c0de7957 c0de7957        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_validate_14)
-c0de7957 c0de7957        a     1                 C_icon_validate_14
-c0de7961 c0de7961       19     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_warning_bitmap)
-c0de7961 c0de7961       19     1                 C_icon_warning_bitmap
-c0de797a c0de797a        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_warning)
-c0de797a c0de797a        a     1                 C_icon_warning
-c0de7984 c0de7984       40     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_app_zknox_14px_bitmap)
-c0de7984 c0de7984       40     1                 C_app_zknox_14px_bitmap
-c0de79c4 c0de79c4        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_app_zknox_14px)
-c0de79c4 c0de79c4        a     1                 C_app_zknox_14px
-c0de79ce c0de79ce      350     1         <internal>:(.text)
-c0de7d20 c0de7d20      260     8         <internal>:(.text)
-c0de7f80 c0de7f80       a0     4         build/nanos2/obj/app/src/handler/zkn_magicbox.o:(.rodata..L__const.handler_cmd_Poseidon.input)
-c0de7f80 c0de7f80       a0     1                 .L__const.handler_cmd_Poseidon.input
-c0de8020 c0de8020      1e0     4         build/nanos2/obj/app/src/handler/zkn_magicbox.o:(.rodata..L__const.handler_cmd_encodeCommitment.commitmentlist_be)
-c0de8020 c0de8020      1e0     1                 .L__const.handler_cmd_encodeCommitment.commitmentlist_be
-c0de8200 c0de8200      1e0     4         build/nanos2/obj/app/src/handler/zkn_magicbox.o:(.rodata..L__const.handler_cmd_GroupCommitment.commitmentlist_be)
-c0de8200 c0de8200      1e0     1                 .L__const.handler_cmd_GroupCommitment.commitmentlist_be
-c0de83e0 c0de83e0       60     4         build/nanos2/obj/app/src/handler/zkn_magicbox.o:(.rodata..L__const.handler_cmd_GroupCommitment.binding_factors)
-c0de83e0 c0de83e0       60     1                 .L__const.handler_cmd_GroupCommitment.binding_factors
-c0de8440 c0de8440      1e0     4         build/nanos2/obj/app/src/handler/zkn_magicbox.o:(.rodata..L__const.handler_cmd_BindingFactors.commitmentlist_be)
-c0de8440 c0de8440      1e0     1                 .L__const.handler_cmd_BindingFactors.commitmentlist_be
-c0de8620 c0de8620        c     4         build/nanos2/obj/app/src/ui/menu_nbgl.o:(.rodata.settingContents)
-c0de8620 c0de8620        c     1                 settingContents
-c0de862c c0de862c       10     4         build/nanos2/obj/app/src/ui/menu_nbgl.o:(.rodata.infoList)
-c0de862c c0de862c       10     1                 infoList
-c0de863c c0de863c       38     4         build/nanos2/obj/app/src/ui/menu_nbgl.o:(.rodata.contents)
-c0de863c c0de863c       38     1                 contents
-c0de8674 c0de8674        8     4         build/nanos2/obj/app/src/ui/menu_nbgl.o:(.rodata.INFO_TYPES)
-c0de8674 c0de8674        8     1                 INFO_TYPES
-c0de867c c0de867c        8     4         build/nanos2/obj/app/src/ui/menu_nbgl.o:(.rodata.INFO_CONTENTS)
-c0de867c c0de867c        8     1                 INFO_CONTENTS
-c0de8684 c0de8684       40     4         build/nanos2/obj/app/src/zknox/ecc/zkn_eddsa.o:(.rodata..L__const.EddsaPoseidon_Sign_final.big_n)
-c0de8684 c0de8684       40     1                 .L__const.EddsaPoseidon_Sign_final.big_n
-c0de86c4 c0de86c4      480     4         build/nanos2/obj/app/src/zknox/hash/zkn_poseidon_constants.o:(.rodata..L__const.Poseidon_alloc_init.MixColumn)
-c0de86c4 c0de86c4      480     1                 .L__const.Poseidon_alloc_init.MixColumn
-c0de8b44 c0de8b44       1d     4         build/nanos2/obj/app/src/zknox/hash/zkn_rfc9591frost.o:(.rodata..L__const.zkn_frost_H5_init.contextString_BabyFROST)
-c0de8b44 c0de8b44       1d     1                 .L__const.zkn_frost_H5_init.contextString_BabyFROST
-c0de8b64 c0de8b64       28     4         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.rodata.blindSigningWarning)
-c0de8b64 c0de8b64       28     1                 blindSigningWarning
-c0de8b8c c0de8b8c       20     1         <internal>:(.text)
-c0de8bac c0de8bac        0     1         . = ALIGN ( 4 )
-c0de8bac c0de8bac        0     1         _etext = .
-c0de8bac c0de8bac       54     1         . = ALIGN ( PAGE_SIZE )
+c0de77ea c0de77ea       19     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_home_boilerplate_14px_bitmap)
+c0de77ea c0de77ea       19     1                 C_home_boilerplate_14px_bitmap
+c0de7803 c0de7803        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_home_boilerplate_14px)
+c0de7803 c0de7803        a     1                 C_home_boilerplate_14px
+c0de780d c0de780d       19     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_Information_circle_14px_bitmap)
+c0de780d c0de780d       19     1                 C_Information_circle_14px_bitmap
+c0de7826 c0de7826        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_Information_circle_14px)
+c0de7826 c0de7826        a     1                 C_Information_circle_14px
+c0de7830 c0de7830       19     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_Quit_14px_bitmap)
+c0de7830 c0de7830       19     1                 C_Quit_14px_bitmap
+c0de7849 c0de7849        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_Quit_14px)
+c0de7849 c0de7849        a     1                 C_Quit_14px
+c0de7853 c0de7853        c     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_Switch_Off_8px_bitmap)
+c0de7853 c0de7853        c     1                 C_Switch_Off_8px_bitmap
+c0de785f c0de785f        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_Switch_Off_8px)
+c0de785f c0de785f        a     1                 C_Switch_Off_8px
+c0de7869 c0de7869        c     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_Switch_On_8px_bitmap)
+c0de7869 c0de7869        c     1                 C_Switch_On_8px_bitmap
+c0de7875 c0de7875        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_Switch_On_8px)
+c0de7875 c0de7875        a     1                 C_Switch_On_8px
+c0de787f c0de787f       19     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_back_x_bitmap)
+c0de787f c0de787f       19     1                 C_icon_back_x_bitmap
+c0de7898 c0de7898        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_back_x)
+c0de7898 c0de7898        a     1                 C_icon_back_x
+c0de78a2 c0de78a2       19     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_coggle_bitmap)
+c0de78a2 c0de78a2       19     1                 C_icon_coggle_bitmap
+c0de78bb c0de78bb        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_coggle)
+c0de78bb c0de78bb        a     1                 C_icon_coggle
+c0de78c5 c0de78c5       19     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_crossmark_bitmap)
+c0de78c5 c0de78c5       19     1                 C_icon_crossmark_bitmap
+c0de78de c0de78de        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_crossmark)
+c0de78de c0de78de        a     1                 C_icon_crossmark
+c0de78e8 c0de78e8        4     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_down_bitmap)
+c0de78e8 c0de78e8        4     1                 C_icon_down_bitmap
+c0de78ec c0de78ec        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_down)
+c0de78ec c0de78ec        a     1                 C_icon_down
+c0de78f6 c0de78f6        4     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_left_bitmap)
+c0de78f6 c0de78f6        4     1                 C_icon_left_bitmap
+c0de78fa c0de78fa        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_left)
+c0de78fa c0de78fa        a     1                 C_icon_left
+c0de7904 c0de7904       19     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_processing_bitmap)
+c0de7904 c0de7904       19     1                 C_icon_processing_bitmap
+c0de791d c0de791d        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_processing)
+c0de791d c0de791d        a     1                 C_icon_processing
+c0de7927 c0de7927        4     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_right_bitmap)
+c0de7927 c0de7927        4     1                 C_icon_right_bitmap
+c0de792b c0de792b        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_right)
+c0de792b c0de792b        a     1                 C_icon_right
+c0de7935 c0de7935        4     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_up_bitmap)
+c0de7935 c0de7935        4     1                 C_icon_up_bitmap
+c0de7939 c0de7939        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_up)
+c0de7939 c0de7939        a     1                 C_icon_up
+c0de7943 c0de7943       17     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_validate_14_bitmap)
+c0de7943 c0de7943       17     1                 C_icon_validate_14_bitmap
+c0de795a c0de795a        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_validate_14)
+c0de795a c0de795a        a     1                 C_icon_validate_14
+c0de7964 c0de7964       19     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_warning_bitmap)
+c0de7964 c0de7964       19     1                 C_icon_warning_bitmap
+c0de797d c0de797d        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_icon_warning)
+c0de797d c0de797d        a     1                 C_icon_warning
+c0de7987 c0de7987       19     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_app_boilerplate_14px_bitmap)
+c0de7987 c0de7987       19     1                 C_app_boilerplate_14px_bitmap
+c0de79a0 c0de79a0        a     1         build/nanos2/gen_src/glyphs.o:(.rodata.C_app_boilerplate_14px)
+c0de79a0 c0de79a0        a     1                 C_app_boilerplate_14px
+c0de79aa c0de79aa      350     1         <internal>:(.text)
+c0de7d00 c0de7d00      260     8         <internal>:(.text)
+c0de7f60 c0de7f60       a0     4         build/nanos2/obj/app/src/handler/zkn_magicbox.o:(.rodata..L__const.handler_cmd_Poseidon.input)
+c0de7f60 c0de7f60       a0     1                 .L__const.handler_cmd_Poseidon.input
+c0de8000 c0de8000      1e0     4         build/nanos2/obj/app/src/handler/zkn_magicbox.o:(.rodata..L__const.handler_cmd_encodeCommitment.commitmentlist_be)
+c0de8000 c0de8000      1e0     1                 .L__const.handler_cmd_encodeCommitment.commitmentlist_be
+c0de81e0 c0de81e0      1e0     4         build/nanos2/obj/app/src/handler/zkn_magicbox.o:(.rodata..L__const.handler_cmd_GroupCommitment.commitmentlist_be)
+c0de81e0 c0de81e0      1e0     1                 .L__const.handler_cmd_GroupCommitment.commitmentlist_be
+c0de83c0 c0de83c0       60     4         build/nanos2/obj/app/src/handler/zkn_magicbox.o:(.rodata..L__const.handler_cmd_GroupCommitment.binding_factors)
+c0de83c0 c0de83c0       60     1                 .L__const.handler_cmd_GroupCommitment.binding_factors
+c0de8420 c0de8420      1e0     4         build/nanos2/obj/app/src/handler/zkn_magicbox.o:(.rodata..L__const.handler_cmd_BindingFactors.commitmentlist_be)
+c0de8420 c0de8420      1e0     1                 .L__const.handler_cmd_BindingFactors.commitmentlist_be
+c0de8600 c0de8600        c     4         build/nanos2/obj/app/src/ui/menu_nbgl.o:(.rodata.settingContents)
+c0de8600 c0de8600        c     1                 settingContents
+c0de860c c0de860c       10     4         build/nanos2/obj/app/src/ui/menu_nbgl.o:(.rodata.infoList)
+c0de860c c0de860c       10     1                 infoList
+c0de861c c0de861c       38     4         build/nanos2/obj/app/src/ui/menu_nbgl.o:(.rodata.contents)
+c0de861c c0de861c       38     1                 contents
+c0de8654 c0de8654        8     4         build/nanos2/obj/app/src/ui/menu_nbgl.o:(.rodata.INFO_TYPES)
+c0de8654 c0de8654        8     1                 INFO_TYPES
+c0de865c c0de865c        8     4         build/nanos2/obj/app/src/ui/menu_nbgl.o:(.rodata.INFO_CONTENTS)
+c0de865c c0de865c        8     1                 INFO_CONTENTS
+c0de8664 c0de8664       40     4         build/nanos2/obj/app/src/zknox/ecc/zkn_eddsa.o:(.rodata..L__const.EddsaPoseidon_Sign_final.big_n)
+c0de8664 c0de8664       40     1                 .L__const.EddsaPoseidon_Sign_final.big_n
+c0de86a4 c0de86a4      480     4         build/nanos2/obj/app/src/zknox/hash/zkn_poseidon_constants.o:(.rodata..L__const.Poseidon_alloc_init.MixColumn)
+c0de86a4 c0de86a4      480     1                 .L__const.Poseidon_alloc_init.MixColumn
+c0de8b24 c0de8b24       1d     4         build/nanos2/obj/app/src/zknox/hash/zkn_rfc9591frost.o:(.rodata..L__const.zkn_frost_H5_init.contextString_BabyFROST)
+c0de8b24 c0de8b24       1d     1                 .L__const.zkn_frost_H5_init.contextString_BabyFROST
+c0de8b44 c0de8b44       28     4         build/nanos2/obj/sdk/lib_nbgl/src/nbgl_use_case_nanos.o:(.rodata.blindSigningWarning)
+c0de8b44 c0de8b44       28     1                 blindSigningWarning
+c0de8b6c c0de8b6c       20     1         <internal>:(.text)
+c0de8b8c c0de8b8c        0     1         . = ALIGN ( 4 )
+c0de8b8c c0de8b8c        0     1         _etext = .
+c0de8b8c c0de8b8c       74     1         . = ALIGN ( PAGE_SIZE )
 c0de8c00 c0de8c00        0     1         _nvram_data = .
 c0de8c00 c0de8c00        3     1         build/nanos2/obj/app/src/app_main.o:(.rodata.N_storage_real)
 c0de8c00 c0de8c00        3     1                 N_storage_real
 c0de8c03 c0de8c03      1fd     1         . = ALIGN ( PAGE_SIZE )
 c0de8e00 c0de8e00        0     1         _envram_data = .
 c0de8e00 c0de8e00        0     1         _install_parameters = .
-c0de8e00 c0de8e00       88     1         build/nanos2/obj/sdk/src/app_metadata.o:(.install_parameters)
-c0de8e00 c0de8e00       88     1                 install_parameters
-c0de8e88 c0de8e88        0     1         _einstall_parameters = .
-c0de8e88 c0de8e88        0     1         _nvram_end = .
+c0de8e00 c0de8e00       3f     1         build/nanos2/obj/sdk/src/app_metadata.o:(.install_parameters)
+c0de8e00 c0de8e00       3f     1                 install_parameters
+c0de8e3f c0de8e3f        0     1         _einstall_parameters = .
+c0de8e3f c0de8e3f        0     1         _nvram_end = .
 d0000000 d0000000        0     1 .data
 d0000000 d0000000        0     1         . = ALIGN ( 4 )
 d0000000 d0000000        0     1         _data = .
@@ -1539,5 +1539,5 @@ d0000010 d0000010        0     1 PROVIDE ( _envram = ABSOLUTE ( _nvram_end ) )
        0        0     46c0     4         <internal>:(.symtab)
        0        0       f8     1 .shstrtab
        0        0       f8     1         <internal>:(.shstrtab)
-       0        0     3567     1 .strtab
-       0        0     3567     1         <internal>:(.strtab)
+       0        0     357f     1 .strtab
+       0        0     357f     1         <internal>:(.strtab)

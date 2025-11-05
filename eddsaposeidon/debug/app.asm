@@ -381,7 +381,7 @@ c0de03ba:	2101      	movs	r1, #1
 c0de03bc:	f006 f9d2 	bl	c0de6764 <io_send_response_buffers>
 c0de03c0:	b004      	add	sp, #16
 c0de03c2:	bd80      	pop	{r7, pc}
-c0de03c4:	00007917 	.word	0x00007917
+c0de03c4:	0000792c 	.word	0x0000792c
 
 c0de03c8 <handler_get_public_key>:
 c0de03c8:	b5f0      	push	{r4, r5, r6, r7, lr}
@@ -582,7 +582,7 @@ c0de05f0:	f006 ff2c 	bl	c0de744c <os_sched_exit>
 c0de05f4:	00000000 	.word	0x00000000
 c0de05f8:	000008cc 	.word	0x000008cc
 c0de05fc:	000008cd 	.word	0x000008cd
-c0de0600:	00007433 	.word	0x00007433
+c0de0600:	0000740f 	.word	0x0000740f
 
 c0de0604 <io_send_sw>:
 c0de0604:	b580      	push	{r7, lr}
@@ -726,9 +726,9 @@ c0de073e:	f000 fe07 	bl	c0de1350 <OUTLINED_FUNCTION_11>
 c0de0742:	2000      	movs	r0, #0
 c0de0744:	e7f8      	b.n	c0de0738 <handler_cmd_bolos_stretch+0x78>
 c0de0746:	bf00      	nop
-c0de0748:	0000772a 	.word	0x0000772a
-c0de074c:	0000769e 	.word	0x0000769e
-c0de0750:	000077b2 	.word	0x000077b2
+c0de0748:	0000770a 	.word	0x0000770a
+c0de074c:	0000767e 	.word	0x0000767e
+c0de0750:	00007792 	.word	0x00007792
 
 c0de0754 <handler_cmd_Poseidon>:
 c0de0754:	e92d 41f0 	stmdb	sp!, {r4, r5, r6, r7, r8, lr}
@@ -836,8 +836,8 @@ c0de0850:	d1bc      	bne.n	c0de07cc <handler_cmd_Poseidon+0x78>
 c0de0852:	2000      	movs	r0, #0
 c0de0854:	e7bc      	b.n	c0de07d0 <handler_cmd_Poseidon+0x7c>
 c0de0856:	bf00      	nop
-c0de0858:	00007818 	.word	0x00007818
-c0de085c:	00007774 	.word	0x00007774
+c0de0858:	000077f8 	.word	0x000077f8
+c0de085c:	00007754 	.word	0x00007754
 
 c0de0860 <handler_cmd_Poseidon_ithRC>:
 c0de0860:	b570      	push	{r4, r5, r6, lr}
@@ -895,8 +895,8 @@ c0de08dc:	bd70      	pop	{r4, r5, r6, pc}
 c0de08de:	2000      	movs	r0, #0
 c0de08e0:	e7fb      	b.n	c0de08da <handler_cmd_Poseidon_ithRC+0x7a>
 c0de08e2:	bf00      	nop
-c0de08e4:	000074ea 	.word	0x000074ea
-c0de08e8:	0000767c 	.word	0x0000767c
+c0de08e4:	000074ca 	.word	0x000074ca
+c0de08e8:	0000765c 	.word	0x0000765c
 
 c0de08ec <handler_cmd_tEddsaPoseidon_Kpub>:
 c0de08ec:	b5b0      	push	{r4, r5, r7, lr}
@@ -1109,8 +1109,8 @@ c0de0af6:	b06b      	add	sp, #428	@ 0x1ac
 c0de0af8:	e8bd 85f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, sl, pc}
 c0de0afc:	2000      	movs	r0, #0
 c0de0afe:	e7fa      	b.n	c0de0af6 <handler_cmd_tEddsaPoseidon+0xd6>
-c0de0b00:	0000749c 	.word	0x0000749c
-c0de0b04:	000074ae 	.word	0x000074ae
+c0de0b00:	0000747c 	.word	0x0000747c
+c0de0b04:	0000748e 	.word	0x0000748e
 
 c0de0b08 <handler_cmd_tEdwards>:
 c0de0b08:	b5f0      	push	{r4, r5, r6, r7, lr}
@@ -1252,10 +1252,10 @@ c0de0c58:	f64c 2003 	movw	r0, #51715	@ 0xca03
 c0de0c5c:	e773      	b.n	c0de0b46 <handler_cmd_tEdwards+0x3e>
 c0de0c5e:	f64c 2004 	movw	r0, #51716	@ 0xca04
 c0de0c62:	e770      	b.n	c0de0b46 <handler_cmd_tEdwards+0x3e>
-c0de0c64:	0000723e 	.word	0x0000723e
-c0de0c68:	000072b4 	.word	0x000072b4
-c0de0c6c:	00007248 	.word	0x00007248
-c0de0c70:	000071be 	.word	0x000071be
+c0de0c64:	0000721e 	.word	0x0000721e
+c0de0c68:	00007294 	.word	0x00007294
+c0de0c6c:	00007228 	.word	0x00007228
+c0de0c70:	0000719e 	.word	0x0000719e
 
 c0de0c74 <handler_cmd_Interpolate>:
 c0de0c74:	e92d 4df0 	stmdb	sp!, {r4, r5, r6, r7, r8, sl, fp, lr}
@@ -1666,7 +1666,7 @@ c0de106e:	a890      	add	r0, sp, #576	@ 0x240
 c0de1070:	f000 f96e 	bl	c0de1350 <OUTLINED_FUNCTION_11>
 c0de1074:	2000      	movs	r0, #0
 c0de1076:	e7f7      	b.n	c0de1068 <handler_cmd_encodeCommitment+0x58>
-c0de1078:	00006fe0 	.word	0x00006fe0
+c0de1078:	00006fc0 	.word	0x00006fc0
 
 c0de107c <handler_cmd_GroupCommitment>:
 c0de107c:	b570      	push	{r4, r5, r6, lr}
@@ -1717,8 +1717,8 @@ c0de10ee:	2140      	movs	r1, #64	@ 0x40
 c0de10f0:	f7ff fab6 	bl	c0de0660 <io_send_response_pointer>
 c0de10f4:	2000      	movs	r0, #0
 c0de10f6:	e7f6      	b.n	c0de10e6 <handler_cmd_GroupCommitment+0x6a>
-c0de10f8:	00007150 	.word	0x00007150
-c0de10fc:	00007322 	.word	0x00007322
+c0de10f8:	00007130 	.word	0x00007130
+c0de10fc:	00007302 	.word	0x00007302
 
 c0de1100 <handler_cmd_BindingFactors>:
 c0de1100:	e92d 45f0 	stmdb	sp!, {r4, r5, r6, r7, r8, sl, lr}
@@ -1803,9 +1803,9 @@ c0de11d0:	f50d 7d65 	add.w	sp, sp, #916	@ 0x394
 c0de11d4:	e8bd 85f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, sl, pc}
 c0de11d8:	2000      	movs	r0, #0
 c0de11da:	e7f9      	b.n	c0de11d0 <handler_cmd_BindingFactors+0xd0>
-c0de11dc:	000072fa 	.word	0x000072fa
-c0de11e0:	00006cd2 	.word	0x00006cd2
-c0de11e4:	00006de4 	.word	0x00006de4
+c0de11dc:	000072da 	.word	0x000072da
+c0de11e0:	00006cb2 	.word	0x00006cb2
+c0de11e4:	00006dc4 	.word	0x00006dc4
 
 c0de11e8 <handler_get_insecure_secret>:
 c0de11e8:	b510      	push	{r4, lr}
@@ -2148,7 +2148,7 @@ c0de14fa:	f005 fc4f 	bl	c0de6d9c <snprintf>
 c0de14fe:	b00c      	add	sp, #48	@ 0x30
 c0de1500:	bd70      	pop	{r4, r5, r6, pc}
 c0de1502:	bf00      	nop
-c0de1504:	00006762 	.word	0x00006762
+c0de1504:	0000673e 	.word	0x0000673e
 
 c0de1508 <swap_copy_transaction_parameters>:
 c0de1508:	b5f0      	push	{r4, r5, r6, r7, lr}
@@ -2477,15 +2477,15 @@ c0de1826:	f003 f837 	bl	c0de4898 <nbgl_useCaseHomeAndSettings>
 c0de182a:	bdbf      	pop	{r0, r1, r2, r3, r4, r5, r7, pc}
 c0de182c:	00000340 	.word	0x00000340
 c0de1830:	0000742e 	.word	0x0000742e
-c0de1834:	00006327 	.word	0x00006327
-c0de1838:	0000648e 	.word	0x0000648e
-c0de183c:	0000638a 	.word	0x0000638a
-c0de1840:	000061d0 	.word	0x000061d0
+c0de1834:	00006303 	.word	0x00006303
+c0de1838:	0000646a 	.word	0x0000646a
+c0de183c:	00006366 	.word	0x00006366
+c0de1840:	000061ac 	.word	0x000061ac
 c0de1844:	ffffffb1 	.word	0xffffffb1
-c0de1848:	00006e1a 	.word	0x00006e1a
-c0de184c:	00006e0c 	.word	0x00006e0c
-c0de1850:	00006499 	.word	0x00006499
-c0de1854:	00005fd8 	.word	0x00005fd8
+c0de1848:	00006dfa 	.word	0x00006dfa
+c0de184c:	00006dec 	.word	0x00006dec
+c0de1850:	000064ae 	.word	0x000064ae
+c0de1854:	00005fdb 	.word	0x00005fdb
 
 c0de1858 <controls_callback>:
 c0de1858:	b5bf      	push	{r0, r1, r2, r3, r4, r5, r7, lr}
@@ -2547,11 +2547,11 @@ c0de18e8:	0000738e 	.word	0x0000738e
 c0de18ec:	00007372 	.word	0x00007372
 c0de18f0:	00007362 	.word	0x00007362
 c0de18f4:	00000045 	.word	0x00000045
-c0de18f8:	000062e2 	.word	0x000062e2
-c0de18fc:	000060a2 	.word	0x000060a2
-c0de1900:	000060f4 	.word	0x000060f4
-c0de1904:	000061b8 	.word	0x000061b8
-c0de1908:	0000639e 	.word	0x0000639e
+c0de18f8:	000062be 	.word	0x000062be
+c0de18fc:	000060a5 	.word	0x000060a5
+c0de1900:	000060d0 	.word	0x000060d0
+c0de1904:	00006194 	.word	0x00006194
+c0de1908:	0000637a 	.word	0x0000637a
 
 c0de190c <review_warning_choice>:
 c0de190c:	b5b0      	push	{r4, r5, r7, lr}
@@ -2594,10 +2594,10 @@ c0de196a:	bdb0      	pop	{r4, r5, r7, pc}
 c0de196c:	00000340 	.word	0x00000340
 c0de1970:	000072e6 	.word	0x000072e6
 c0de1974:	fffffe71 	.word	0xfffffe71
-c0de1978:	00006cda 	.word	0x00006cda
-c0de197c:	00006ccc 	.word	0x00006ccc
-c0de1980:	0000635b 	.word	0x0000635b
-c0de1984:	00005e9a 	.word	0x00005e9a
+c0de1978:	00006cba 	.word	0x00006cba
+c0de197c:	00006cac 	.word	0x00006cac
+c0de1980:	00006370 	.word	0x00006370
+c0de1984:	00005e9d 	.word	0x00005e9d
 
 c0de1988 <OUTLINED_FUNCTION_0>:
 c0de1988:	4620      	mov	r0, r4
@@ -2661,8 +2661,8 @@ c0de1a1e:	bd70      	pop	{r4, r5, r6, pc}
 c0de1a20:	00000000 	.word	0x00000000
 c0de1a24:	0000035c 	.word	0x0000035c
 c0de1a28:	0000005d 	.word	0x0000005d
-c0de1a2c:	00005fce 	.word	0x00005fce
-c0de1a30:	000062f5 	.word	0x000062f5
+c0de1a2c:	00005faa 	.word	0x00005faa
+c0de1a30:	000062c9 	.word	0x000062c9
 
 c0de1a34 <io_send_sw>:
 c0de1a34:	b580      	push	{r7, lr}
@@ -2792,14 +2792,14 @@ c0de1b72:	f002 ff39 	bl	c0de49e8 <nbgl_useCaseReview>
 c0de1b76:	e7ef      	b.n	c0de1b58 <ui_display_transaction_bs_choice+0xf4>
 c0de1b78:	00000000 	.word	0x00000000
 c0de1b7c:	00000388 	.word	0x00000388
-c0de1b80:	0000619a 	.word	0x0000619a
-c0de1b84:	00005f88 	.word	0x00005f88
-c0de1b88:	0000615d 	.word	0x0000615d
+c0de1b80:	00006176 	.word	0x00006176
+c0de1b84:	00005f64 	.word	0x00005f64
+c0de1b88:	00006139 	.word	0x00006139
 c0de1b8c:	00000099 	.word	0x00000099
-c0de1b90:	00005e96 	.word	0x00005e96
-c0de1b94:	00005ea6 	.word	0x00005ea6
-c0de1b98:	00005e52 	.word	0x00005e52
-c0de1b9c:	00005e62 	.word	0x00005e62
+c0de1b90:	00005e72 	.word	0x00005e72
+c0de1b94:	00005e82 	.word	0x00005e82
+c0de1b98:	00005e2e 	.word	0x00005e2e
+c0de1b9c:	00005e3e 	.word	0x00005e3e
 
 c0de1ba0 <io_send_sw>:
 c0de1ba0:	b580      	push	{r7, lr}
@@ -3166,7 +3166,7 @@ c0de1f3a:	f10b 0140 	add.w	r1, fp, #64	@ 0x40
 c0de1f3e:	f000 f80d 	bl	c0de1f5c <OUTLINED_FUNCTION_1>
 c0de1f42:	e6c9      	b.n	c0de1cd8 <EddsaPoseidon_Sign_final+0x44>
 c0de1f44:	5a4b4e03 	.word	0x5a4b4e03
-c0de1f48:	0000692e 	.word	0x0000692e
+c0de1f48:	0000690e 	.word	0x0000690e
 
 c0de1f4c <rev64>:
 c0de1f4c:	ba0a      	rev	r2, r1
@@ -4165,16 +4165,16 @@ c0de28d4:	4801      	ldr	r0, [pc, #4]	@ (c0de28dc <tEdwards_Curve_alloc_init+0x1
 c0de28d6:	b052      	add	sp, #328	@ 0x148
 c0de28d8:	e8bd 8df0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, sl, fp, pc}
 c0de28dc:	5a4b4e01 	.word	0x5a4b4e01
-c0de28e0:	000055d6 	.word	0x000055d6
-c0de28e4:	00005768 	.word	0x00005768
-c0de28e8:	00005718 	.word	0x00005718
-c0de28ec:	0000566a 	.word	0x0000566a
-c0de28f0:	00005776 	.word	0x00005776
-c0de28f4:	000056c8 	.word	0x000056c8
-c0de28f8:	00005738 	.word	0x00005738
-c0de28fc:	0000576a 	.word	0x0000576a
-c0de2900:	0000577a 	.word	0x0000577a
-c0de2904:	0000562c 	.word	0x0000562c
+c0de28e0:	000055b6 	.word	0x000055b6
+c0de28e4:	00005748 	.word	0x00005748
+c0de28e8:	000056f8 	.word	0x000056f8
+c0de28ec:	0000564a 	.word	0x0000564a
+c0de28f0:	00005756 	.word	0x00005756
+c0de28f4:	000056a8 	.word	0x000056a8
+c0de28f8:	00005718 	.word	0x00005718
+c0de28fc:	0000574a 	.word	0x0000574a
+c0de2900:	0000575a 	.word	0x0000575a
+c0de2904:	0000560c 	.word	0x0000560c
 
 c0de2908 <tEdwards_init>:
 c0de2908:	b5fe      	push	{r1, r2, r3, r4, r5, r6, r7, lr}
@@ -4821,7 +4821,7 @@ c0de2f20:	2001      	movs	r0, #1
 c0de2f22:	6120      	str	r0, [r4, #16]
 c0de2f24:	2000      	movs	r0, #0
 c0de2f26:	e7c2      	b.n	c0de2eae <Poseidon_alloc_init+0x4e>
-c0de2f28:	00005840 	.word	0x00005840
+c0de2f28:	00005820 	.word	0x00005820
 
 c0de2f2c <Poseidon>:
 c0de2f2c:	e92d 4df0 	stmdb	sp!, {r4, r5, r6, r7, r8, sl, fp, lr}
@@ -5045,7 +5045,7 @@ c0de3156:	f004 f815 	bl	c0de7184 <cx_bn_destroy>
 c0de315a:	b059      	add	sp, #356	@ 0x164
 c0de315c:	bdf0      	pop	{r4, r5, r6, r7, pc}
 c0de315e:	bf00      	nop
-c0de3160:	00005a58 	.word	0x00005a58
+c0de3160:	00005a38 	.word	0x00005a38
 
 c0de3164 <Babyfrost_H1>:
 c0de3164:	b5bf      	push	{r0, r1, r2, r3, r4, r5, r7, lr}
@@ -5140,7 +5140,7 @@ c0de3232:	f000 f849 	bl	c0de32c8 <OUTLINED_FUNCTION_0>
 c0de3236:	b00c      	add	sp, #48	@ 0x30
 c0de3238:	bd70      	pop	{r4, r5, r6, pc}
 c0de323a:	bf00      	nop
-c0de323c:	00005916 	.word	0x00005916
+c0de323c:	000058f6 	.word	0x000058f6
 
 c0de3240 <zkn_frost_H5_init>:
 c0de3240:	b570      	push	{r4, r5, r6, lr}
@@ -5162,7 +5162,7 @@ c0de3266:	f000 f82f 	bl	c0de32c8 <OUTLINED_FUNCTION_0>
 c0de326a:	b00c      	add	sp, #48	@ 0x30
 c0de326c:	bd70      	pop	{r4, r5, r6, pc}
 c0de326e:	bf00      	nop
-c0de3270:	000058e2 	.word	0x000058e2
+c0de3270:	000058c2 	.word	0x000058c2
 
 c0de3274 <zkn_frost_hash_update>:
 c0de3274:	f003 bd09 	b.w	c0de6c8a <cx_hash_update>
@@ -5801,10 +5801,10 @@ c0de382e:	f04f 36ff 	mov.w	r6, #4294967295	@ 0xffffffff
 c0de3832:	4630      	mov	r0, r6
 c0de3834:	bd70      	pop	{r4, r5, r6, pc}
 c0de3836:	bf00      	nop
-c0de3838:	00004145 	.word	0x00004145
-c0de383c:	00004182 	.word	0x00004182
-c0de3840:	0000412a 	.word	0x0000412a
-c0de3844:	000040e9 	.word	0x000040e9
+c0de3838:	00004148 	.word	0x00004148
+c0de383c:	00004185 	.word	0x00004185
+c0de3840:	0000412d 	.word	0x0000412d
+c0de3844:	000040ec 	.word	0x000040ec
 
 c0de3848 <nbgl_layoutAddText>:
 c0de3848:	2800      	cmp	r0, #0
@@ -6680,10 +6680,10 @@ c0de4172:	70a1      	strb	r1, [r4, #2]
 c0de4174:	7178      	strb	r0, [r7, #5]
 c0de4176:	4630      	mov	r0, r6
 c0de4178:	e8bd 8df0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, sl, fp, pc}
-c0de417c:	000039fb 	.word	0x000039fb
-c0de4180:	00003ac8 	.word	0x00003ac8
-c0de4184:	00003746 	.word	0x00003746
-c0de4188:	0000372e 	.word	0x0000372e
+c0de417c:	000039d7 	.word	0x000039d7
+c0de4180:	00003aa4 	.word	0x00003aa4
+c0de4184:	00003749 	.word	0x00003749
+c0de4188:	00003731 	.word	0x00003731
 
 c0de418c <nbgl_layoutDraw>:
 c0de418c:	b120      	cbz	r0, c0de4198 <nbgl_layoutDraw+0xc>
@@ -7027,7 +7027,7 @@ c0de44b2:	f002 fbfa 	bl	c0de6caa <nbgl_refresh>
 c0de44b6:	b011      	add	sp, #68	@ 0x44
 c0de44b8:	e8bd 85f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, sl, pc}
 c0de44bc:	000001bb 	.word	0x000001bb
-c0de44c0:	000035f1 	.word	0x000035f1
+c0de44c0:	000035cd 	.word	0x000035cd
 
 c0de44c4 <nbgl_stepDrawCenteredInfo>:
 c0de44c4:	e92d 45f0 	stmdb	sp!, {r4, r5, r6, r7, r8, sl, lr}
@@ -7719,7 +7719,7 @@ c0de4b3e:	f7ff ff8b 	bl	c0de4a58 <nbgl_useCaseAdvancedReview>
 c0de4b42:	b006      	add	sp, #24
 c0de4b44:	bdb0      	pop	{r4, r5, r7, pc}
 c0de4b46:	bf00      	nop
-c0de4b48:	00004030 	.word	0x00004030
+c0de4b48:	00004010 	.word	0x00004010
 
 c0de4b4c <nbgl_useCaseAddressReview>:
 c0de4b4c:	e92d 45f8 	stmdb	sp!, {r3, r4, r5, r6, r7, r8, sl, lr}
@@ -7913,9 +7913,9 @@ c0de4d28:	f884 0059 	strb.w	r0, [r4, #89]	@ 0x59
 c0de4d2c:	b00b      	add	sp, #44	@ 0x2c
 c0de4d2e:	bdf0      	pop	{r4, r5, r6, r7, pc}
 c0de4d30:	00000744 	.word	0x00000744
-c0de4d34:	0000304b 	.word	0x0000304b
-c0de4d38:	00002d2f 	.word	0x00002d2f
-c0de4d3c:	00002b17 	.word	0x00002b17
+c0de4d34:	00003027 	.word	0x00003027
+c0de4d38:	00002d0b 	.word	0x00002d0b
+c0de4d3c:	00002b1a 	.word	0x00002b1a
 c0de4d40:	000010bd 	.word	0x000010bd
 c0de4d44:	000011a1 	.word	0x000011a1
 c0de4d48:	00001267 	.word	0x00001267
@@ -8163,14 +8163,14 @@ c0de4f9a:	2101      	movs	r1, #1
 c0de4f9c:	4478      	add	r0, pc
 c0de4f9e:	f7ff bed5 	b.w	c0de4d4c <nbgl_useCaseStatus>
 c0de4fa2:	bf00      	nop
-c0de4fa4:	00002a74 	.word	0x00002a74
-c0de4fa8:	00002ac8 	.word	0x00002ac8
-c0de4fac:	00002b5f 	.word	0x00002b5f
-c0de4fb0:	00002d24 	.word	0x00002d24
-c0de4fb4:	00002bbe 	.word	0x00002bbe
-c0de4fb8:	00002cba 	.word	0x00002cba
-c0de4fbc:	00002ae3 	.word	0x00002ae3
-c0de4fc0:	00002c1d 	.word	0x00002c1d
+c0de4fa4:	00002a50 	.word	0x00002a50
+c0de4fa8:	00002aa4 	.word	0x00002aa4
+c0de4fac:	00002b3b 	.word	0x00002b3b
+c0de4fb0:	00002d00 	.word	0x00002d00
+c0de4fb4:	00002b9a 	.word	0x00002b9a
+c0de4fb8:	00002c96 	.word	0x00002c96
+c0de4fbc:	00002abf 	.word	0x00002abf
+c0de4fc0:	00002bf9 	.word	0x00002bf9
 
 c0de4fc4 <displayStreamingReviewPage>:
 c0de4fc4:	b570      	push	{r4, r5, r6, lr}
@@ -8317,8 +8317,8 @@ c0de512e:	b00c      	add	sp, #48	@ 0x30
 c0de5130:	bd70      	pop	{r4, r5, r6, pc}
 c0de5132:	bf00      	nop
 c0de5134:	00000744 	.word	0x00000744
-c0de5138:	00002929 	.word	0x00002929
-c0de513c:	00002711 	.word	0x00002711
+c0de5138:	00002905 	.word	0x00002905
+c0de513c:	00002714 	.word	0x00002714
 c0de5140:	00000cb7 	.word	0x00000cb7
 c0de5144:	00001079 	.word	0x00001079
 
@@ -8343,7 +8343,7 @@ c0de5170:	f7ff fe0c 	bl	c0de4d8c <drawStep>
 c0de5174:	e8bd 40bf 	ldmia.w	sp!, {r0, r1, r2, r3, r4, r5, r7, lr}
 c0de5178:	f001 bd97 	b.w	c0de6caa <nbgl_refresh>
 c0de517c:	00000744 	.word	0x00000744
-c0de5180:	000027a8 	.word	0x000027a8
+c0de5180:	000027ab 	.word	0x000027ab
 
 c0de5184 <nbgl_useCaseChoice>:
 c0de5184:	e92d 41f0 	stmdb	sp!, {r4, r5, r6, r7, r8, lr}
@@ -8433,9 +8433,9 @@ c0de525a:	f001 bd26 	b.w	c0de6caa <nbgl_refresh>
 c0de525e:	bf00      	nop
 c0de5260:	00000744 	.word	0x00000744
 c0de5264:	00000f71 	.word	0x00000f71
-c0de5268:	0000272f 	.word	0x0000272f
+c0de5268:	00002732 	.word	0x00002732
 c0de526c:	00000fa5 	.word	0x00000fa5
-c0de5270:	000026d3 	.word	0x000026d3
+c0de5270:	000026d6 	.word	0x000026d6
 c0de5274:	00000f69 	.word	0x00000f69
 
 c0de5278 <getContentAtIdx>:
@@ -8611,9 +8611,9 @@ c0de53ee:	b00a      	add	sp, #40	@ 0x28
 c0de53f0:	bd70      	pop	{r4, r5, r6, pc}
 c0de53f2:	bf00      	nop
 c0de53f4:	00000744 	.word	0x00000744
-c0de53f8:	000028bd 	.word	0x000028bd
-c0de53fc:	00002515 	.word	0x00002515
-c0de5400:	000024d1 	.word	0x000024d1
+c0de53f8:	00002899 	.word	0x00002899
+c0de53fc:	00002518 	.word	0x00002518
+c0de5400:	000024d4 	.word	0x000024d4
 c0de5404:	000001b9 	.word	0x000001b9
 c0de5408:	0000020d 	.word	0x0000020d
 
@@ -9004,8 +9004,8 @@ c0de57c0:	bdb0      	pop	{r4, r5, r7, pc}
 c0de57c2:	bf00      	nop
 c0de57c4:	00000744 	.word	0x00000744
 c0de57c8:	fffff1cd 	.word	0xfffff1cd
-c0de57cc:	000024d3 	.word	0x000024d3
-c0de57d0:	000020f3 	.word	0x000020f3
+c0de57cc:	000024af 	.word	0x000024af
+c0de57d0:	000020f6 	.word	0x000020f6
 c0de57d4:	0000002b 	.word	0x0000002b
 c0de57d8:	00000069 	.word	0x00000069
 
@@ -9235,15 +9235,15 @@ c0de59e4:	f7ff f9d2 	bl	c0de4d8c <drawStep>
 c0de59e8:	e8bd 41ff 	ldmia.w	sp!, {r0, r1, r2, r3, r4, r5, r6, r7, r8, lr}
 c0de59ec:	f001 b95d 	b.w	c0de6caa <nbgl_refresh>
 c0de59f0:	00000744 	.word	0x00000744
-c0de59f4:	0000233a 	.word	0x0000233a
+c0de59f4:	00002316 	.word	0x00002316
 c0de59f8:	0000008d 	.word	0x0000008d
-c0de59fc:	00001f20 	.word	0x00001f20
-c0de5a00:	00002241 	.word	0x00002241
+c0de59fc:	00001f23 	.word	0x00001f23
+c0de5a00:	0000221d 	.word	0x0000221d
 c0de5a04:	00000073 	.word	0x00000073
-c0de5a08:	00001e69 	.word	0x00001e69
-c0de5a0c:	000022eb 	.word	0x000022eb
-c0de5a10:	00001e72 	.word	0x00001e72
-c0de5a14:	00002337 	.word	0x00002337
+c0de5a08:	00001e6c 	.word	0x00001e6c
+c0de5a0c:	000022c7 	.word	0x000022c7
+c0de5a10:	00001e75 	.word	0x00001e75
+c0de5a14:	00002313 	.word	0x00002313
 c0de5a18:	0000006b 	.word	0x0000006b
 
 c0de5a1c <startUseCaseSettings>:
@@ -9321,8 +9321,8 @@ c0de5ac0:	f001 b8f3 	b.w	c0de6caa <nbgl_refresh>
 c0de5ac4:	00000744 	.word	0x00000744
 c0de5ac8:	00001643 	.word	0x00001643
 c0de5acc:	ffffeebf 	.word	0xffffeebf
-c0de5ad0:	00001def 	.word	0x00001def
-c0de5ad4:	000021c7 	.word	0x000021c7
+c0de5ad0:	00001df2 	.word	0x00001df2
+c0de5ad4:	000021a3 	.word	0x000021a3
 c0de5ad8:	00000029 	.word	0x00000029
 
 c0de5adc <infoCallback>:
@@ -9416,9 +9416,9 @@ c0de5bac:	9004      	str	r0, [sp, #16]
 c0de5bae:	e9cd 1202 	strd	r1, r2, [sp, #8]
 c0de5bb2:	e7e8      	b.n	c0de5b86 <displayWarningStep+0x8e>
 c0de5bb4:	00000744 	.word	0x00000744
-c0de5bb8:	00001f5c 	.word	0x00001f5c
-c0de5bbc:	00002089 	.word	0x00002089
-c0de5bc0:	00001df4 	.word	0x00001df4
+c0de5bb8:	00001f38 	.word	0x00001f38
+c0de5bbc:	00002065 	.word	0x00002065
+c0de5bc0:	00001df7 	.word	0x00001df7
 c0de5bc4:	00000155 	.word	0x00000155
 
 c0de5bc8 <getLastPageInfo>:
@@ -9518,28 +9518,28 @@ c0de5c8e:	6348      	str	r0, [r1, #52]	@ 0x34
 c0de5c90:	4770      	bx	lr
 c0de5c92:	bf00      	nop
 c0de5c94:	00000744 	.word	0x00000744
-c0de5c98:	00001d87 	.word	0x00001d87
+c0de5c98:	00001d8a 	.word	0x00001d8a
 c0de5c9c:	0000018f 	.word	0x0000018f
-c0de5ca0:	0000212e 	.word	0x0000212e
+c0de5ca0:	0000210a 	.word	0x0000210a
 c0de5ca4:	00000161 	.word	0x00000161
-c0de5ca8:	00001f01 	.word	0x00001f01
-c0de5cac:	00001fa2 	.word	0x00001fa2
+c0de5ca8:	00001edd 	.word	0x00001edd
+c0de5cac:	00001f7e 	.word	0x00001f7e
 c0de5cb0:	00000127 	.word	0x00000127
-c0de5cb4:	00001ebd 	.word	0x00001ebd
-c0de5cb8:	00001efb 	.word	0x00001efb
+c0de5cb4:	00001e99 	.word	0x00001e99
+c0de5cb8:	00001ed7 	.word	0x00001ed7
 c0de5cbc:	000000ff 	.word	0x000000ff
-c0de5cc0:	00002030 	.word	0x00002030
-c0de5cc4:	00001f9b 	.word	0x00001f9b
+c0de5cc0:	0000200c 	.word	0x0000200c
+c0de5cc4:	00001f77 	.word	0x00001f77
 c0de5cc8:	000000eb 	.word	0x000000eb
-c0de5ccc:	00001ced 	.word	0x00001ced
+c0de5ccc:	00001cf0 	.word	0x00001cf0
 c0de5cd0:	00000185 	.word	0x00000185
-c0de5cd4:	00001fa6 	.word	0x00001fa6
+c0de5cd4:	00001f82 	.word	0x00001f82
 c0de5cd8:	00000133 	.word	0x00000133
-c0de5cdc:	00001efe 	.word	0x00001efe
+c0de5cdc:	00001eda 	.word	0x00001eda
 c0de5ce0:	0000015f 	.word	0x0000015f
-c0de5ce4:	0000209b 	.word	0x0000209b
+c0de5ce4:	0000206f 	.word	0x0000206f
 c0de5ce8:	00000129 	.word	0x00000129
-c0de5cec:	00002074 	.word	0x00002074
+c0de5cec:	00002048 	.word	0x00002048
 
 c0de5cf0 <warningNavigate>:
 c0de5cf0:	2904      	cmp	r1, #4
@@ -9860,8 +9860,8 @@ c0de5ffe:	b008      	add	sp, #32
 c0de6000:	e8bd 81f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, pc}
 c0de6004:	00000744 	.word	0x00000744
 c0de6008:	00000027 	.word	0x00000027
-c0de600c:	00001cef 	.word	0x00001cef
-c0de6010:	00001909 	.word	0x00001909
+c0de600c:	00001ccb 	.word	0x00001ccb
+c0de6010:	0000190c 	.word	0x0000190c
 c0de6014:	00000085 	.word	0x00000085
 
 c0de6018 <extensionNavigate>:
@@ -9957,7 +9957,7 @@ c0de60f2:	b010      	add	sp, #64	@ 0x40
 c0de60f4:	bdb0      	pop	{r4, r5, r7, pc}
 c0de60f6:	bf00      	nop
 c0de60f8:	00000744 	.word	0x00000744
-c0de60fc:	00001b7b 	.word	0x00001b7b
+c0de60fc:	00001b57 	.word	0x00001b57
 
 c0de6100 <onChoiceSelected>:
 c0de6100:	b570      	push	{r4, r5, r6, lr}
@@ -10645,7 +10645,7 @@ c0de66e8:	5550      	strb	r0, [r2, r5]
 c0de66ea:	4660      	mov	r0, ip
 c0de66ec:	bdf0      	pop	{r4, r5, r6, r7, pc}
 c0de66ee:	bf00      	nop
-c0de66f0:	0000158d 	.word	0x0000158d
+c0de66f0:	00001569 	.word	0x00001569
 
 c0de66f4 <app_ticker_event_callback>:
 c0de66f4:	4770      	bx	lr
@@ -10872,7 +10872,7 @@ c0de6926:	bf00      	nop
 c0de6928:	000008cc 	.word	0x000008cc
 c0de692c:	000008cd 	.word	0x000008cd
 c0de6930:	000008d0 	.word	0x000008d0
-c0de6934:	00001184 	.word	0x00001184
+c0de6934:	00001160 	.word	0x00001160
 
 c0de6938 <apdu_parser>:
 c0de6938:	2a04      	cmp	r2, #4
@@ -11717,11 +11717,11 @@ c0de70a2:	b007      	add	sp, #28
 c0de70a4:	e8bd 4df0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, sl, fp, lr}
 c0de70a8:	b001      	add	sp, #4
 c0de70aa:	4770      	bx	lr
-c0de70ac:	00001c6a 	.word	0x00001c6a
-c0de70b0:	00001cd4 	.word	0x00001cd4
-c0de70b4:	00001c78 	.word	0x00001c78
-c0de70b8:	00001bbe 	.word	0x00001bbe
-c0de70bc:	00001b58 	.word	0x00001b58
+c0de70ac:	00001c4a 	.word	0x00001c4a
+c0de70b0:	00001cb4 	.word	0x00001cb4
+c0de70b4:	00001c58 	.word	0x00001c58
+c0de70b8:	00001b9e 	.word	0x00001b9e
+c0de70bc:	00001b38 	.word	0x00001b38
 
 c0de70c0 <pic>:
 c0de70c0:	4a0a      	ldr	r2, [pc, #40]	@ (c0de70ec <pic+0x2c>)
@@ -11745,7 +11745,7 @@ c0de70e6:	4408      	add	r0, r1
 c0de70e8:	4770      	bx	lr
 c0de70ea:	0000      	movs	r0, r0
 c0de70ec:	c0de0000 	.word	0xc0de0000
-c0de70f0:	c0de8e88 	.word	0xc0de8e88
+c0de70f0:	c0de8e3f 	.word	0xc0de8e3f
 c0de70f4:	da7a0000 	.word	0xda7a0000
 c0de70f8:	da7aa000 	.word	0xda7aa000
 
@@ -12555,444 +12555,437 @@ c0de77e2:	bd10      	pop	{r4, pc}
 c0de77e4:	f803 1b01 	strb.w	r1, [r3], #1
 c0de77e8:	e7f9      	b.n	c0de77de <strncpy+0x1a>
 
-c0de77ea <C_home_zknox_14px_bitmap>:
-c0de77ea:	000e 000e 0e02 0000 f0f0 f0f0 f0f0 f0f0     ................
-c0de77fa:	f0f0 f0f0 10f0                              ......
+c0de77ea <C_home_boilerplate_14px_bitmap>:
+c0de77ea:	e11f e4ff b70f b1bf ad7e 705a 5f6f 7fbf     ........~.Zpo_..
+c0de77fa:	fc7b df0f 7ffe 7ff8                          {........
 
-c0de7800 <C_home_zknox_14px>:
-c0de7800:	000e 000e 0100 77ea c0de                    .......w..
+c0de7803 <C_home_boilerplate_14px>:
+c0de7803:	000e 000e 0000 77ea c0de                    .......w..
 
-c0de780a <C_Information_circle_14px_bitmap>:
-c0de780a:	8007 837f 1fff 7ffe fffb 81fc 07f2 fdfb     ................
-c0de781a:	e7ff 8fff 1ffc 1ee0                          .........
+c0de780d <C_Information_circle_14px_bitmap>:
+c0de780d:	8007 837f 1fff 7ffe fffb 81fc 07f2 fdfb     ................
+c0de781d:	e7ff 8fff 1ffc 1ee0                          .........
 
-c0de7823 <C_Information_circle_14px>:
-c0de7823:	000e 000e 0000 780a c0de                    .......x..
+c0de7826 <C_Information_circle_14px>:
+c0de7826:	000e 000e 0000 780d c0de                    .......x..
 
-c0de782d <C_Quit_14px_bitmap>:
-c0de782d:	0003 001e 00fc 03c0 cc01 33e7 c698 1963     ...........3..c.
-c0de783d:	6680 9801 7f06 fff9                          .f.......
+c0de7830 <C_Quit_14px_bitmap>:
+c0de7830:	0003 001e 00fc 03c0 cc01 33e7 c698 1963     ...........3..c.
+c0de7840:	6680 9801 7f06 fff9                          .f.......
 
-c0de7846 <C_Quit_14px>:
-c0de7846:	000e 000e 0000 782d c0de                    ......-x..
+c0de7849 <C_Quit_14px>:
+c0de7849:	000e 000e 0000 7830 c0de                    ......0x..
 
-c0de7850 <C_Switch_Off_8px_bitmap>:
-c0de7850:	423c 8181 8181 bd99 99bd 3c42               <B........B<
+c0de7853 <C_Switch_Off_8px_bitmap>:
+c0de7853:	423c 8181 8181 bd99 99bd 3c42               <B........B<
 
-c0de785c <C_Switch_Off_8px>:
-c0de785c:	000c 0008 0000 7850 c0de                    ......Px..
+c0de785f <C_Switch_Off_8px>:
+c0de785f:	000c 0008 0000 7853 c0de                    ......Sx..
 
-c0de7866 <C_Switch_On_8px_bitmap>:
-c0de7866:	7e3c c3e7 e7c3 ffff ffff 3c7e               <~........~<
+c0de7869 <C_Switch_On_8px_bitmap>:
+c0de7869:	7e3c c3e7 e7c3 ffff ffff 3c7e               <~........~<
 
-c0de7872 <C_Switch_On_8px>:
-c0de7872:	000c 0008 0000 7866 c0de                    ......fx..
+c0de7875 <C_Switch_On_8px>:
+c0de7875:	000c 0008 0000 7869 c0de                    ......ix..
 
-c0de787c <C_icon_back_x_bitmap>:
-c0de787c:	0000 0000 0030 03c0 0c00 3303 dc0e e01f     ....0......3....
-c0de788c:	003f 0078 00c0 0000                          ?.x......
+c0de787f <C_icon_back_x_bitmap>:
+c0de787f:	0000 0000 0030 03c0 0c00 3303 dc0e e01f     ....0......3....
+c0de788f:	003f 0078 00c0 0000                          ?.x......
 
-c0de7895 <C_icon_back_x>:
-c0de7895:	000e 000e 0000 787c c0de                    ......|x..
+c0de7898 <C_icon_back_x>:
+c0de7898:	000e 000e 0000 787f c0de                    .......x..
 
-c0de789f <C_icon_coggle_bitmap>:
-c0de789f:	0000 0000 0230 1fd0 3fe0 cf03 3c0f c00f     ....0....?...<..
-c0de78af:	807f 00b4 00c0 0000                          .........
+c0de78a2 <C_icon_coggle_bitmap>:
+c0de78a2:	0000 0000 0230 1fd0 3fe0 cf03 3c0f c00f     ....0....?...<..
+c0de78b2:	807f 00b4 00c0 0000                          .........
 
-c0de78b8 <C_icon_coggle>:
-c0de78b8:	000e 000e 0000 789f c0de                    .......x..
+c0de78bb <C_icon_coggle>:
+c0de78bb:	000e 000e 0000 78a2 c0de                    .......x..
 
-c0de78c2 <C_icon_crossmark_bitmap>:
-c0de78c2:	0100 6780 8e03 1c1c 3fe0 7800 e001 c00f     ...g.....?.x....
-c0de78d2:	8373 1c87 600e 0018                          s....`...
+c0de78c5 <C_icon_crossmark_bitmap>:
+c0de78c5:	0100 6780 8e03 1c1c 3fe0 7800 e001 c00f     ...g.....?.x....
+c0de78d5:	8373 1c87 600e 0018                          s....`...
 
-c0de78db <C_icon_crossmark>:
-c0de78db:	000e 000e 0000 78c2 c0de                    .......x..
+c0de78de <C_icon_crossmark>:
+c0de78de:	000e 000e 0000 78c5 c0de                    .......x..
 
-c0de78e5 <C_icon_down_bitmap>:
-c0de78e5:	2184 8024                                   .!$.
+c0de78e8 <C_icon_down_bitmap>:
+c0de78e8:	2184 8024                                   .!$.
 
-c0de78e9 <C_icon_down>:
-c0de78e9:	0007 0004 0000 78e5 c0de                    .......x..
+c0de78ec <C_icon_down>:
+c0de78ec:	0007 0004 0000 78e8 c0de                    .......x..
 
-c0de78f3 <C_icon_left_bitmap>:
-c0de78f3:	8882 80a0                                   ....
+c0de78f6 <C_icon_left_bitmap>:
+c0de78f6:	8882 80a0                                   ....
 
-c0de78f7 <C_icon_left>:
-c0de78f7:	0004 0007 0000 78f3 c0de                    .......x..
+c0de78fa <C_icon_left>:
+c0de78fa:	0004 0007 0000 78f6 c0de                    .......x..
 
-c0de7901 <C_icon_processing_bitmap>:
-c0de7901:	0000 010c 0e32 18dc 0060 0307 0e9c 0000     ....2...`.......
-c0de7911:	8361 04b7 03c8 0000                          a........
+c0de7904 <C_icon_processing_bitmap>:
+c0de7904:	0000 010c 0e32 18dc 0060 0307 0e9c 0000     ....2...`.......
+c0de7914:	8361 04b7 03c8 0000                          a........
 
-c0de791a <C_icon_processing>:
-c0de791a:	000e 000e 0000 7901 c0de                    .......y..
+c0de791d <C_icon_processing>:
+c0de791d:	000e 000e 0000 7904 c0de                    .......y..
 
-c0de7924 <C_icon_right_bitmap>:
-c0de7924:	5110 1014                                   .Q..
+c0de7927 <C_icon_right_bitmap>:
+c0de7927:	5110 1014                                   .Q..
 
-c0de7928 <C_icon_right>:
-c0de7928:	0004 0007 0000 7924 c0de                    ......$y..
+c0de792b <C_icon_right>:
+c0de792b:	0004 0007 0000 7927 c0de                    ......'y..
 
-c0de7932 <C_icon_up_bitmap>:
-c0de7932:	4812 1042                                   .HB.
+c0de7935 <C_icon_up_bitmap>:
+c0de7935:	4812 1042                                   .HB.
 
-c0de7936 <C_icon_up>:
-c0de7936:	0007 0004 0000 7932 c0de                    ......2y..
+c0de7939 <C_icon_up>:
+c0de7939:	0007 0004 0000 7935 c0de                    ......5y..
 
-c0de7940 <C_icon_validate_14_bitmap>:
-c0de7940:	000e 000e 0f02 0000 c332 c3c3 c3c3 c3c3     ........2.......
-c0de7950:	a3b3 a3a3 f0b2                               ......P
+c0de7943 <C_icon_validate_14_bitmap>:
+c0de7943:	000e 000e 0f02 0000 c332 c3c3 c3c3 c3c3     ........2.......
+c0de7953:	a3b3 a3a3 f0b2                               ......P
 
-c0de7957 <C_icon_validate_14>:
-c0de7957:	000e 000e 0100 7940 c0de                    ......@y..
+c0de795a <C_icon_validate_14>:
+c0de795a:	000e 000e 0100 7943 c0de                    ......Cy..
 
-c0de7961 <C_icon_warning_bitmap>:
-c0de7961:	0000 6000 8007 077e 7ff8 04e7 129c f81f     ...`..~.........
-c0de7971:	e01f 801f 001e 0018                          .........
+c0de7964 <C_icon_warning_bitmap>:
+c0de7964:	0000 6000 8007 077e 7ff8 04e7 129c f81f     ...`..~.........
+c0de7974:	e01f 801f 001e 0018                          .........
 
-c0de797a <C_icon_warning>:
-c0de797a:	000e 000e 0000 7961 c0de                    ......ay..
+c0de797d <C_icon_warning>:
+c0de797d:	000e 000e 0000 7964 c0de                    ......dy..
 
-c0de7984 <C_app_zknox_14px_bitmap>:
-c0de7984:	000e 000e 3822 0000 1ee0 0dc9 1609 0d09     ...."8..........
-c0de7994:	bdc6 3274 0610 c50c 8c1b 1394 0e08 9cc4     ..t2............
-c0de79a4:	e0ed a918 a98b bdc2 eaed 0980 1b1c c10e     ................
-c0de79b4:	2e0d 2a0d c22d 8d4e c6cd 0e1d c82d e13e     ...*-.N.....-.>.
+c0de7987 <C_app_boilerplate_14px_bitmap>:
+c0de7987:	0000 0300 08f0 4e40 5281 8fa5 a090 8040     ......@N.R....@.
+c0de7997:	0384 00f0 0000 0000                          .........
 
-c0de79c4 <C_app_zknox_14px>:
-c0de79c4:	000e 000e 0102 7984 c0de 7544 6d6d 2079     .......y..Dummy 
-c0de79d4:	0032 6552 6976 7765 7420 6172 736e 6361     2.Review transac
-c0de79e4:	6974 6e6f 740a 206f 6573 646e 4220 4c4f     tion.to send BOL
-c0de79f4:	2500 2073 2528 2f64 6425 0029 704f 7265     .%s (%d/%d).Oper
-c0de7a04:	7461 6f69 206e 6973 6e67 6465 4200 696c     ation signed.Bli
-c0de7a14:	646e 732d 6769 006e 2e30 2e30 0031 704f     nd-sign.0.0.1.Op
-c0de7a24:	7265 7461 6f69 206e 6572 656a 7463 6465     eration rejected
-c0de7a34:	5000 6572 7373 7220 6769 7468 6220 7475     .Press right but
-c0de7a44:	6f74 206e 6f74 6320 6e6f 6974 756e 2065     ton to continue 
-c0de7a54:	656d 7373 6761 2065 726f 0820 7270 7365     message or .pres
-c0de7a64:	2073 6f62 6874 7420 206f 6b73 7069 0008     s both to skip..
-c0de7a74:	6953 6e67 6e69 0067 6d41 756f 746e 4100     Signing.Amount.A
-c0de7a84:	6464 6572 7373 7620 7265 6669 6569 0064     ddress verified.
-c0de7a94:	7241 2065 6f79 2075 7573 6572 7420 0a6f     Are you sure to.
-c0de7aa4:	6c61 6f6c 2077 7564 6d6d 2079 0a32 6e69     allow dummy 2.in
-c0de7ab4:	7420 6172 736e 6361 6974 6e6f 3f73 5400      transactions?.T
-c0de7ac4:	6172 736e 6361 6974 6e6f 7320 6769 656e     ransaction signe
-c0de7ad4:	0064 6f54 6120 6363 7065 2074 6972 6b73     d.To accept risk
-c0de7ae4:	202c 7270 7365 2073 6f62 6874 6220 7475     , press both but
-c0de7af4:	6f74 736e 4400 7665 6c65 706f 7265 4500     tons.Developer.E
-c0de7b04:	616e 6c62 6465 4100 6c6c 776f 6420 6d75     nabled.Allow dum
-c0de7b14:	796d 3120 690a 206e 7274 6e61 6173 7463     my 1.in transact
-c0de7b24:	6f69 736e 5300 6769 206e 656d 7373 6761     ions.Sign messag
-c0de7b34:	0065 654d 7373 6761 2065 6973 6e67 6465     e.Message signed
-c0de7b44:	5300 6769 206e 7274 6e61 6173 7463 6f69     .Sign transactio
-c0de7b54:	006e 6552 656a 7463 7420 6172 736e 6361     n.Reject transac
-c0de7b64:	6974 6e6f 4100 6363 7065 2074 6972 6b73     tion.Accept risk
-c0de7b74:	6120 646e 7320 6769 206e 656d 7373 6761      and sign messag
-c0de7b84:	0065 6c41 6f6c 2077 7564 6d6d 2079 0a32     e.Allow dummy 2.
-c0de7b94:	6e69 7420 6172 736e 6361 6974 6e6f 0073     in transactions.
-c0de7ba4:	6556 7372 6f69 006e 6143 636e 6c65 4100     Version.Cancel.A
-c0de7bb4:	6464 6572 7373 7620 7265 6669 6369 7461     ddress verificat
-c0de7bc4:	6f69 206e 6163 636e 6c65 656c 0064 6944     ion cancelled.Di
-c0de7bd4:	6173 6c62 6465 4100 7070 7320 7465 6974     sabled.App setti
-c0de7be4:	676e 0073 6341 6563 7470 7220 7369 206b     ngs.Accept risk 
-c0de7bf4:	6e61 2064 6973 6e67 7420 6172 736e 6361     and sign transac
-c0de7c04:	6974 6e6f 4200 696c 646e 7320 6769 696e     tion.Blind signi
-c0de7c14:	676e 6120 6568 6461 4100 6363 7065 2074     ng ahead.Accept 
-c0de7c24:	6972 6b73 6120 646e 7320 6769 206e 706f     risk and sign op
-c0de7c34:	7265 7461 6f69 006e 654d 7373 6761 2065     eration.Message 
-c0de7c44:	6572 656a 7463 6465 3000 3231 3433 3635     rejected.0123456
-c0de7c54:	3837 4139 4342 4544 0046 4f42 204c 2e25     789ABCDEF.BOL %.
-c0de7c64:	732a 4100 6464 6572 7373 4200 6361 006b     *s.Address.Back.
-c0de7c74:	7544 6d6d 2079 0031 2049 6e75 6564 7372     Dummy 1.I unders
-c0de7c84:	6174 646e 202c 6f63 666e 7269 006d 7254     tand, confirm.Tr
-c0de7c94:	6e61 6173 7463 6f69 206e 6572 656a 7463     ansaction reject
-c0de7ca4:	6465 4100 7070 6920 666e 006f 6953 6e67     ed.App info.Sign
-c0de7cb4:	6f20 6570 6172 6974 6e6f 4500 4444 4153      operation.EDDSA
-c0de7cc4:	4b5a 5200 6a65 6365 2074 656d 7373 6761     ZK.Reject messag
-c0de7cd4:	0065 6552 656a 7463 6f20 6570 6172 6974     e.Reject operati
-c0de7ce4:	6e6f 5a00 4e4b 584f 5600 7265 6669 2079     on.ZKNOX.Verify 
-c0de7cf4:	4f42 204c 6461 7264 7365 0073 7061 2070     BOL address.app 
-c0de7d04:	7369 7220 6165 7964 5100 6975 2074 7061     is ready.Quit ap
-c0de7d14:	0070 6f43 666e 7269 006d 0000 ed73 53a7     p.Confirm...s..S
-c0de7d24:	9d29 487d 3933 08d8 a109 05d8 bd53 02a4     ).}H39......S...
-c0de7d34:	feff fe5b ffff ffff 0000 0100 ce05 c698     ..[.............
-c0de7d44:	051b 7ff4 eae2 a5e9 bd42 f699 e7b2 4682     ........B......F
-c0de7d54:	1623 b540 9545 bffe 1ed5 53b8 0001 0000     #.@.E......S....
-c0de7d64:	0000 0000 0002 0000 0000 0000 0003 0000     ................
-c0de7d74:	0000 0000 0004 0000 0000 0000 a005 91c0     ................
-c0de7d84:	8356 988b af28 123f e167 e675 84e2 9dc7     V...(.?.g.u.....
-c0de7d94:	6d1b d08a 0acd d9e0 9057 6e33 c61c 38ee     .m......W.3n...8
-c0de7da4:	9c13 111c 2302 7a53 e78c 069d 587e 10cc     .....#Sz....~X..
-c0de7db4:	c667 b7fb b3d8 b0a1 fc8d 088f 4d27 e8bc     g...........'M..
-c0de7dc4:	51d1 9679 c09b 9fd4 25a7 dfbd e59d e055     .Qy......%....U.
-c0de7dd4:	6aba 3c69 db6a fc52 e79e 2ca8 fb1c d469     .ji<j.R....,..i.
-c0de7de4:	67ca 525f ce0c 0276 6802 0076 8fff 0087     .g_R..v..hv.....
-c0de7df4:	1974 7104 fd74 b506 7628 e1e7 0c06 ce89     t..qt...(v......
-c0de7e04:	265c 0534 0a37 b608 30d0 0b2b 3eab b8ed     \&4.7....0+..>..
-c0de7e14:	2039 0aee 7267 dc97 2139 f126 a570 4a89     9 ..gr..9!&.p..J
-c0de7e24:	4464 3854 15d0 32ac 36ba 090f de2c ba44     dDT8...2.6..,.D.
-c0de7e34:	1fb1 b7c2 b5d4 d2c0 2216 ce8c 820b 39b7     .........".....9
-c0de7e44:	8de7 57da 5ae7 80c6 68ef f19d 8f15 eee3     ...W.Z...h......
-c0de7e54:	09d8 6d5c d14b c7b2 66c1 fdee 0000 0000     ..\mK....f......
+c0de79a0 <C_app_boilerplate_14px>:
+c0de79a0:	000e 000e 0000 7987 c0de 7544 6d6d 2079     .......y..Dummy 
+c0de79b0:	0032 6552 6976 7765 7420 6172 736e 6361     2.Review transac
+c0de79c0:	6974 6e6f 740a 206f 6573 646e 4220 4c4f     tion.to send BOL
+c0de79d0:	2500 2073 2528 2f64 6425 0029 704f 7265     .%s (%d/%d).Oper
+c0de79e0:	7461 6f69 206e 6973 6e67 6465 4200 696c     ation signed.Bli
+c0de79f0:	646e 732d 6769 006e 2e30 2e30 0031 704f     nd-sign.0.0.1.Op
+c0de7a00:	7265 7461 6f69 206e 6572 656a 7463 6465     eration rejected
+c0de7a10:	5000 6572 7373 7220 6769 7468 6220 7475     .Press right but
+c0de7a20:	6f74 206e 6f74 6320 6e6f 6974 756e 2065     ton to continue 
+c0de7a30:	656d 7373 6761 2065 726f 0820 7270 7365     message or .pres
+c0de7a40:	2073 6f62 6874 7420 206f 6b73 7069 0008     s both to skip..
+c0de7a50:	6953 6e67 6e69 0067 6d41 756f 746e 4100     Signing.Amount.A
+c0de7a60:	6464 6572 7373 7620 7265 6669 6569 0064     ddress verified.
+c0de7a70:	7241 2065 6f79 2075 7573 6572 7420 0a6f     Are you sure to.
+c0de7a80:	6c61 6f6c 2077 7564 6d6d 2079 0a32 6e69     allow dummy 2.in
+c0de7a90:	7420 6172 736e 6361 6974 6e6f 3f73 5400      transactions?.T
+c0de7aa0:	6172 736e 6361 6974 6e6f 7320 6769 656e     ransaction signe
+c0de7ab0:	0064 6f54 6120 6363 7065 2074 6972 6b73     d.To accept risk
+c0de7ac0:	202c 7270 7365 2073 6f62 6874 6220 7475     , press both but
+c0de7ad0:	6f74 736e 4400 7665 6c65 706f 7265 4500     tons.Developer.E
+c0de7ae0:	616e 6c62 6465 4100 6c6c 776f 6420 6d75     nabled.Allow dum
+c0de7af0:	796d 3120 690a 206e 7274 6e61 6173 7463     my 1.in transact
+c0de7b00:	6f69 736e 5300 6769 206e 656d 7373 6761     ions.Sign messag
+c0de7b10:	0065 654d 7373 6761 2065 6973 6e67 6465     e.Message signed
+c0de7b20:	5300 6769 206e 7274 6e61 6173 7463 6f69     .Sign transactio
+c0de7b30:	006e 6552 656a 7463 7420 6172 736e 6361     n.Reject transac
+c0de7b40:	6974 6e6f 4100 6363 7065 2074 6972 6b73     tion.Accept risk
+c0de7b50:	6120 646e 7320 6769 206e 656d 7373 6761      and sign messag
+c0de7b60:	0065 6c41 6f6c 2077 7564 6d6d 2079 0a32     e.Allow dummy 2.
+c0de7b70:	6e69 7420 6172 736e 6361 6974 6e6f 0073     in transactions.
+c0de7b80:	6556 7372 6f69 006e 6143 636e 6c65 4100     Version.Cancel.A
+c0de7b90:	6464 6572 7373 7620 7265 6669 6369 7461     ddress verificat
+c0de7ba0:	6f69 206e 6163 636e 6c65 656c 0064 6944     ion cancelled.Di
+c0de7bb0:	6173 6c62 6465 4100 7070 7320 7465 6974     sabled.App setti
+c0de7bc0:	676e 0073 6341 6563 7470 7220 7369 206b     ngs.Accept risk 
+c0de7bd0:	6e61 2064 6973 6e67 7420 6172 736e 6361     and sign transac
+c0de7be0:	6974 6e6f 4200 696c 646e 7320 6769 696e     tion.Blind signi
+c0de7bf0:	676e 6120 6568 6461 4100 6363 7065 2074     ng ahead.Accept 
+c0de7c00:	6972 6b73 6120 646e 7320 6769 206e 706f     risk and sign op
+c0de7c10:	7265 7461 6f69 006e 654d 7373 6761 2065     eration.Message 
+c0de7c20:	6572 656a 7463 6465 3000 3231 3433 3635     rejected.0123456
+c0de7c30:	3837 4139 4342 4544 0046 4f42 204c 2e25     789ABCDEF.BOL %.
+c0de7c40:	732a 4100 6464 6572 7373 4200 6361 006b     *s.Address.Back.
+c0de7c50:	7544 6d6d 2079 0031 2049 6e75 6564 7372     Dummy 1.I unders
+c0de7c60:	6174 646e 202c 6f63 666e 7269 006d 7254     tand, confirm.Tr
+c0de7c70:	6e61 6173 7463 6f69 206e 6572 656a 7463     ansaction reject
+c0de7c80:	6465 4100 7070 6920 666e 006f 6953 6e67     ed.App info.Sign
+c0de7c90:	6f20 6570 6172 6974 6e6f 5200 6a65 6365      operation.Rejec
+c0de7ca0:	2074 656d 7373 6761 0065 6552 656a 7463     t message.Reject
+c0de7cb0:	6f20 6570 6172 6974 6e6f 5a00 4e4b 584f      operation.ZKNOX
+c0de7cc0:	5600 7265 6669 2079 4f42 204c 6461 7264     .Verify BOL addr
+c0de7cd0:	7365 0073 4b5a 4f4e 4858 0057 7061 2070     ess.ZKNOXHW.app 
+c0de7ce0:	7369 7220 6165 7964 5100 6975 2074 7061     is ready.Quit ap
+c0de7cf0:	0070 6f43 666e 7269 006d 0000 0000 0000     p.Confirm.......
+c0de7d00:	ed73 53a7 9d29 487d 3933 08d8 a109 05d8     s..S).}H39......
+c0de7d10:	bd53 02a4 feff fe5b ffff ffff 0000 0100     S.....[.........
+c0de7d20:	ce05 c698 051b 7ff4 eae2 a5e9 bd42 f699     ............B...
+c0de7d30:	e7b2 4682 1623 b540 9545 bffe 1ed5 53b8     ...F#.@.E......S
+c0de7d40:	0001 0000 0000 0000 0002 0000 0000 0000     ................
+c0de7d50:	0003 0000 0000 0000 0004 0000 0000 0000     ................
+c0de7d60:	a005 91c0 8356 988b af28 123f e167 e675     ....V...(.?.g.u.
+c0de7d70:	84e2 9dc7 6d1b d08a 0acd d9e0 9057 6e33     .....m......W.3n
+c0de7d80:	c61c 38ee 9c13 111c 2302 7a53 e78c 069d     ...8.....#Sz....
+c0de7d90:	587e 10cc c667 b7fb b3d8 b0a1 fc8d 088f     ~X..g...........
+c0de7da0:	4d27 e8bc 51d1 9679 c09b 9fd4 25a7 dfbd     'M...Qy......%..
+c0de7db0:	e59d e055 6aba 3c69 db6a fc52 e79e 2ca8     ..U..ji<j.R....,
+c0de7dc0:	fb1c d469 67ca 525f ce0c 0276 6802 0076     ..i..g_R..v..hv.
+c0de7dd0:	8fff 0087 1974 7104 fd74 b506 7628 e1e7     ....t..qt...(v..
+c0de7de0:	0c06 ce89 265c 0534 0a37 b608 30d0 0b2b     ....\&4.7....0+.
+c0de7df0:	3eab b8ed 2039 0aee 7267 dc97 2139 f126     .>..9 ..gr..9!&.
+c0de7e00:	a570 4a89 4464 3854 15d0 32ac 36ba 090f     p..JdDT8...2.6..
+c0de7e10:	de2c ba44 1fb1 b7c2 b5d4 d2c0 2216 ce8c     ,.D.........."..
+c0de7e20:	820b 39b7 8de7 57da 5ae7 80c6 68ef f19d     ...9...W.Z...h..
+c0de7e30:	8f15 eee3 09d8 6d5c d14b c7b2 66c1 fdee     ......\mK....f..
 	...
-c0de7e7c:	0200 fc92 8963 26c1 c233 cb67 6ec6 f83b     ....c..&3.g..n;.
-c0de7e8c:	e36b d8b6 66cb 7167 e577 924f 69b3 f5f2     k....fgqw.O..i..
-c0de7e9c:	8d18 e758 8105 4afb 4a6e a8b5 0b12 2682     ..X....JnJ.....&
-c0de7eac:	95df 101e 94d7 b7d8 5d70 b31f 996b b98e     ........p]..k...
-c0de7ebc:	4b1a e538 ed73 53a7 9d29 487d 3933 08d8     .K8.s..S).}H39..
-c0de7ecc:	a109 05d8 bd53 02a4 feff fe5b ffff feff     ....S.....[.....
-c0de7edc:	ffff fcff 0000 0000 0000 0000 0000 0000     ................
+c0de7e5c:	0200 fc92 8963 26c1 c233 cb67 6ec6 f83b     ....c..&3.g..n;.
+c0de7e6c:	e36b d8b6 66cb 7167 e577 924f 69b3 f5f2     k....fgqw.O..i..
+c0de7e7c:	8d18 e758 8105 4afb 4a6e a8b5 0b12 2682     ..X....JnJ.....&
+c0de7e8c:	95df 101e 94d7 b7d8 5d70 b31f 996b b98e     ........p]..k...
+c0de7e9c:	4b1a e538 ed73 53a7 9d29 487d 3933 08d8     .K8.s..S).}H39..
+c0de7eac:	a109 05d8 bd53 02a4 feff fe5b ffff feff     ....S.....[.....
+c0de7ebc:	ffff fcff 0000 0000 0000 0000 0000 0000     ................
 	...
-c0de7efc:	0200 f892 6430 724e 31e1 29a0 50b8 b645     ....0dNr.1.).PE.
-c0de7f0c:	8181 5d58 3328 48e8 b979 9170 e143 93f5     ..X](3.Hy.p.C...
-c0de7f1c:	00f0 0100 b70b 6a7a 3ed6 9b73 ac4e e0b2     ......zj.>s.N...
-c0de7f2c:	629d c177 b82a 01d8 3405 b6e0 9328 f6f3     .bw.*....4..(...
-c0de7f3c:	95bb 5170 7925 0372 a0f7 49b2 5725 1c2e     ..pQ%yr....I%W..
-c0de7f4c:	6bd1 edf9 e0fc 1f05 e1b9 7733 3c4b 7a25     .k........3wK<%z
-c0de7f5c:	2d87 8b7d db2d 1c2f 0098 9939 f3a4 aad0     .-}.-./...9.....
-c0de7f6c:	e24c 9d9a 8d1b 43dd 089c b5b2 281b 9240     L......C.....(@.
-c0de7f7c:	88f4 7a60                                   ..`z
+c0de7edc:	0200 f892 6430 724e 31e1 29a0 50b8 b645     ....0dNr.1.).PE.
+c0de7eec:	8181 5d58 3328 48e8 b979 9170 e143 93f5     ..X](3.Hy.p.C...
+c0de7efc:	00f0 0100 b70b 6a7a 3ed6 9b73 ac4e e0b2     ......zj.>s.N...
+c0de7f0c:	629d c177 b82a 01d8 3405 b6e0 9328 f6f3     .bw.*....4..(...
+c0de7f1c:	95bb 5170 7925 0372 a0f7 49b2 5725 1c2e     ..pQ%yr....I%W..
+c0de7f2c:	6bd1 edf9 e0fc 1f05 e1b9 7733 3c4b 7a25     .k........3wK<%z
+c0de7f3c:	2d87 8b7d db2d 1c2f 0098 9939 f3a4 aad0     .-}.-./...9.....
+c0de7f4c:	e24c 9d9a 8d1b 43dd 089c b5b2 281b 9240     L......C.....(@.
+c0de7f5c:	88f4 7a60                                   ..`z
 
-c0de7f80 <.L__const.handler_cmd_Poseidon.input>:
-c0de7f80:	ba27 8413 87a8 77c1 9c8a b0ae 5699 eba9     '......w.....V..
-c0de7f90:	5faf d40b b16c d824 53c0 c82f 3f7c 7265     ._..l.$..S/.|?er
-c0de7fa0:	7101 46b0 1bf3 eee4 6772 3b81 900f 3668     .q.F....rg.;..h6
-c0de7fb0:	f67b 92c9 ea33 c148 a571 e736 1995 537a     {...3.H.q.6...zS
-c0de7fc0:	d707 29c9 2d01 8400 b177 1470 3e22 709b     ...).-..w.p.">.p
-c0de7fd0:	6b6b 25a2 6ae6 a259 3550 f02c 9dd3 b655     kk.%.jY.P5,...U.
-c0de7fe0:	6a2b ebc5 7859 26a9 0d0c 21a1 3693 39c6     +j..Yx.&...!.6.9
-c0de7ff0:	86e1 58f7 1c7a 4086 2ac2 0fb4 8fa9 1847     ...Xz..@.*....G.
-c0de8000:	8405 c70d d6a9 521d 16e1 574c ca9f afab     .......R..LW....
-c0de8010:	dacc 7b47 6141 6e5c 707c 8227 2671 8c1f     ..G{Aa\n|p'.q&..
+c0de7f60 <.L__const.handler_cmd_Poseidon.input>:
+c0de7f60:	ba27 8413 87a8 77c1 9c8a b0ae 5699 eba9     '......w.....V..
+c0de7f70:	5faf d40b b16c d824 53c0 c82f 3f7c 7265     ._..l.$..S/.|?er
+c0de7f80:	7101 46b0 1bf3 eee4 6772 3b81 900f 3668     .q.F....rg.;..h6
+c0de7f90:	f67b 92c9 ea33 c148 a571 e736 1995 537a     {...3.H.q.6...zS
+c0de7fa0:	d707 29c9 2d01 8400 b177 1470 3e22 709b     ...).-..w.p.">.p
+c0de7fb0:	6b6b 25a2 6ae6 a259 3550 f02c 9dd3 b655     kk.%.jY.P5,...U.
+c0de7fc0:	6a2b ebc5 7859 26a9 0d0c 21a1 3693 39c6     +j..Yx.&...!.6.9
+c0de7fd0:	86e1 58f7 1c7a 4086 2ac2 0fb4 8fa9 1847     ...Xz..@.*....G.
+c0de7fe0:	8405 c70d d6a9 521d 16e1 574c ca9f afab     .......R..LW....
+c0de7ff0:	dacc 7b47 6141 6e5c 707c 8227 2671 8c1f     ..G{Aa\n|p'.q&..
 
-c0de8020 <.L__const.handler_cmd_encodeCommitment.commitmentlist_be>:
+c0de8000 <.L__const.handler_cmd_encodeCommitment.commitmentlist_be>:
 	...
-c0de803c:	0000 0100 7e11 d3b1 235d f077 31b2 9f32     .....~..]#w..12.
-c0de804c:	c8d5 a212 deb0 55ab 27d1 f04b 54d7 4eb5     .......U.'K..T.N
-c0de805c:	7709 f574 cb25 194f b48b 3db2 6e31 5e45     .wt.%.O....=1nE^
-c0de806c:	dc71 e963 00d6 3cbe 4dac 63a8 4354 65ad     q.c....<.M.cTC.e
-c0de807c:	aac0 d65d fc0d 93c3 01fe e78d dc2b 2fc4     ..].........+../
-c0de808c:	e1e4 b7df b8ff 2ec4 2abe 6ce8 33e2 14c4     .........*.l.3..
-c0de809c:	01fd c00f 1105 a905 d823 0f8e 6886 98b2     ........#....h..
-c0de80ac:	e4cf 0f3d 48dd cf1c eb76 a2b7 8f10 8e6c     ..=..H..v.....l.
-c0de80bc:	9928 976c 0000 0000 0000 0000 0000 0000     (.l.............
+c0de801c:	0000 0100 7e11 d3b1 235d f077 31b2 9f32     .....~..]#w..12.
+c0de802c:	c8d5 a212 deb0 55ab 27d1 f04b 54d7 4eb5     .......U.'K..T.N
+c0de803c:	7709 f574 cb25 194f b48b 3db2 6e31 5e45     .wt.%.O....=1nE^
+c0de804c:	dc71 e963 00d6 3cbe 4dac 63a8 4354 65ad     q.c....<.M.cTC.e
+c0de805c:	aac0 d65d fc0d 93c3 01fe e78d dc2b 2fc4     ..].........+../
+c0de806c:	e1e4 b7df b8ff 2ec4 2abe 6ce8 33e2 14c4     .........*.l.3..
+c0de807c:	01fd c00f 1105 a905 d823 0f8e 6886 98b2     ........#....h..
+c0de808c:	e4cf 0f3d 48dd cf1c eb76 a2b7 8f10 8e6c     ..=..H..v.....l.
+c0de809c:	9928 976c 0000 0000 0000 0000 0000 0000     (.l.............
 	...
-c0de80dc:	0000 0200 df15 eaad f4d3 acc7 a80f 20e7     ............... 
-c0de80ec:	ade7 cb42 0ce5 585b b8a7 227e 5186 14b7     ..B...[X..~".Q..
-c0de80fc:	3bcc 1507 5621 6d26 193a 41e9 bd1a 7624     .;..!V&m:..A..$v
-c0de810c:	6f64 5833 8f2a deb1 a31b c7b2 df45 72e1     do3X*.......E..r
-c0de811c:	a8a2 9ea9 9a26 52f7 231d fe84 f935 9db6     ....&..R.#..5...
-c0de812c:	c869 8ff9 cefa b690 d42c 4920 4555 8b18     i.......,. IUE..
-c0de813c:	2f49 785e 0000 3f0e f24e 50ed aebd 535e     I/^x...?N..P..^S
-c0de814c:	8896 132e 8ff1 6bc6 098d 8306 ac4f b286     .......k....O...
-c0de815c:	904d f113 0000 0000 0000 0000 0000 0000     M...............
+c0de80bc:	0000 0200 df15 eaad f4d3 acc7 a80f 20e7     ............... 
+c0de80cc:	ade7 cb42 0ce5 585b b8a7 227e 5186 14b7     ..B...[X..~".Q..
+c0de80dc:	3bcc 1507 5621 6d26 193a 41e9 bd1a 7624     .;..!V&m:..A..$v
+c0de80ec:	6f64 5833 8f2a deb1 a31b c7b2 df45 72e1     do3X*.......E..r
+c0de80fc:	a8a2 9ea9 9a26 52f7 231d fe84 f935 9db6     ....&..R.#..5...
+c0de810c:	c869 8ff9 cefa b690 d42c 4920 4555 8b18     i.......,. IUE..
+c0de811c:	2f49 785e 0000 3f0e f24e 50ed aebd 535e     I/^x...?N..P..^S
+c0de812c:	8896 132e 8ff1 6bc6 098d 8306 ac4f b286     .......k....O...
+c0de813c:	904d f113 0000 0000 0000 0000 0000 0000     M...............
 	...
-c0de817c:	0000 0300 0422 55f0 3b56 5d12 a915 32bf     ...."..UV;.]...2
-c0de818c:	47f3 f78e 72a5 069a b026 590d d0ec 3d03     .G...r..&..Y...=
-c0de819c:	a83d 1515 430f c5d0 84da a009 6af2 d809     =....C.......j..
-c0de81ac:	85ac 1ec6 ac40 0dfa 5d93 b7ea 7b4f 7a07     ....@....]..O{.z
-c0de81bc:	42eb a1a5 9629 76b5 ff71 9c5b 44bd 7e5a     .B..)..vq.[..DZ~
-c0de81cc:	359a b04e a86a 98e0 922d 3818 d9c9 a8b1     .5N.j...-..8....
-c0de81dc:	94ee 99f5 7e0a 636c ee77 df02 3641 735d     .....~lcw...A6]s
-c0de81ec:	c21c fe30 319b 9ca6 0a91 0b4c e5c9 7c49     ..0..1....L...I|
-c0de81fc:	9b44 9ffb                                   D...
+c0de815c:	0000 0300 0422 55f0 3b56 5d12 a915 32bf     ...."..UV;.]...2
+c0de816c:	47f3 f78e 72a5 069a b026 590d d0ec 3d03     .G...r..&..Y...=
+c0de817c:	a83d 1515 430f c5d0 84da a009 6af2 d809     =....C.......j..
+c0de818c:	85ac 1ec6 ac40 0dfa 5d93 b7ea 7b4f 7a07     ....@....]..O{.z
+c0de819c:	42eb a1a5 9629 76b5 ff71 9c5b 44bd 7e5a     .B..)..vq.[..DZ~
+c0de81ac:	359a b04e a86a 98e0 922d 3818 d9c9 a8b1     .5N.j...-..8....
+c0de81bc:	94ee 99f5 7e0a 636c ee77 df02 3641 735d     .....~lcw...A6]s
+c0de81cc:	c21c fe30 319b 9ca6 0a91 0b4c e5c9 7c49     ..0..1....L...I|
+c0de81dc:	9b44 9ffb                                   D...
 
-c0de8200 <.L__const.handler_cmd_GroupCommitment.commitmentlist_be>:
+c0de81e0 <.L__const.handler_cmd_GroupCommitment.commitmentlist_be>:
 	...
-c0de821c:	0000 0100 2627 8ea4 26b3 6881 ed3a 7212     ....'&...&.h:..r
-c0de822c:	83b9 81eb 4afa b22b 72a9 05c0 e18f c83e     .....J+..r....>.
-c0de823c:	8de1 cea1 0d07 6491 6415 f23f 54b6 5085     .......d.d?..T.P
-c0de824c:	58d2 e77d fb22 2e74 43e1 0f2b d962 61da     .X}.".t..C+.b..a
-c0de825c:	059c d982 7305 32ed 42dc 3628 dee9 677d     .....s.2.B(6..}g
-c0de826c:	3f6c 0e65 4d30 1234 89dd 8a3d 31de f717     l?e.0M4...=..1..
-c0de827c:	004c fecd a20e ee03 9821 afd4 dda2 4e01     L.......!......N
-c0de828c:	2d4e 4aa4 0d23 e5c0 b54f c8e3 912c 5c5b     N-.J#...O...,.[\
-c0de829c:	d657 cbe6 0000 0000 0000 0000 0000 0000     W...............
+c0de81fc:	0000 0100 2627 8ea4 26b3 6881 ed3a 7212     ....'&...&.h:..r
+c0de820c:	83b9 81eb 4afa b22b 72a9 05c0 e18f c83e     .....J+..r....>.
+c0de821c:	8de1 cea1 0d07 6491 6415 f23f 54b6 5085     .......d.d?..T.P
+c0de822c:	58d2 e77d fb22 2e74 43e1 0f2b d962 61da     .X}.".t..C+.b..a
+c0de823c:	059c d982 7305 32ed 42dc 3628 dee9 677d     .....s.2.B(6..}g
+c0de824c:	3f6c 0e65 4d30 1234 89dd 8a3d 31de f717     l?e.0M4...=..1..
+c0de825c:	004c fecd a20e ee03 9821 afd4 dda2 4e01     L.......!......N
+c0de826c:	2d4e 4aa4 0d23 e5c0 b54f c8e3 912c 5c5b     N-.J#...O...,.[\
+c0de827c:	d657 cbe6 0000 0000 0000 0000 0000 0000     W...............
 	...
-c0de82bc:	0000 0200 3119 c9d9 1344 3bfc 25df cdee     .....1..D..;.%..
-c0de82cc:	5bc0 b4b6 b592 cccb 4939 a342 1e6c 2755     .[......9IB.l.U'
-c0de82dc:	cde8 e533 4c1e 6034 34f4 34f4 21d7 14c8     ..3..L4`.4.4.!..
-c0de82ec:	3ebd cda0 f1cf bfef c684 1fc3 ec95 108f     .>..............
-c0de82fc:	067f 7f74 a915 3db2 657d 3f17 b720 904a     ..t....=}e.? .J.
-c0de830c:	0efb c736 c95c 6bca 36b9 0b7b 819f 6a34     ..6.\..k.6{...4j
-c0de831c:	4065 85ab 0d1c d82d e769 f810 02b2 f48f     e@....-.i.......
-c0de832c:	6b48 8289 9cff 173b 6a84 d93c 3368 fd14     Hk....;..j<.h3..
-c0de833c:	9eef 774a 0000 0000 0000 0000 0000 0000     ..Jw............
+c0de829c:	0000 0200 3119 c9d9 1344 3bfc 25df cdee     .....1..D..;.%..
+c0de82ac:	5bc0 b4b6 b592 cccb 4939 a342 1e6c 2755     .[......9IB.l.U'
+c0de82bc:	cde8 e533 4c1e 6034 34f4 34f4 21d7 14c8     ..3..L4`.4.4.!..
+c0de82cc:	3ebd cda0 f1cf bfef c684 1fc3 ec95 108f     .>..............
+c0de82dc:	067f 7f74 a915 3db2 657d 3f17 b720 904a     ..t....=}e.? .J.
+c0de82ec:	0efb c736 c95c 6bca 36b9 0b7b 819f 6a34     ..6.\..k.6{...4j
+c0de82fc:	4065 85ab 0d1c d82d e769 f810 02b2 f48f     e@....-.i.......
+c0de830c:	6b48 8289 9cff 173b 6a84 d93c 3368 fd14     Hk....;..j<.h3..
+c0de831c:	9eef 774a 0000 0000 0000 0000 0000 0000     ..Jw............
 	...
-c0de835c:	0000 0300 c906 14ab eee1 614a 1c56 32a3     ..........JaV..2
-c0de836c:	ecaf a2e4 7798 c369 e7b5 4b9b daca c359     .....wi....K..Y.
-c0de837c:	7f47 b1c8 151b f46f 7f2e e041 be2a 6429     G.....o...A.*.)d
-c0de838c:	2f0e 90e3 5ad9 a83b 443d 205b 302a 1a5d     ./...Z;.=D[ *0].
-c0de839c:	596c a91f e426 6b67 783e e5be 9c54 3bb0     lY..&.gk>x..T..;
-c0de83ac:	4b45 ff10 9f01 90fb 8854 281c 971f 9fce     EK......T..(....
-c0de83bc:	c4d9 4159 870d ec3b 8965 7d78 9fa6 3c22     ..YA..;.e.x}.."<
-c0de83cc:	cd5e 63d3 6c52 a020 23a8 482b ad49 a594     ^..cRl ..#+HI...
-c0de83dc:	8132 74b1                                   2..t
+c0de833c:	0000 0300 c906 14ab eee1 614a 1c56 32a3     ..........JaV..2
+c0de834c:	ecaf a2e4 7798 c369 e7b5 4b9b daca c359     .....wi....K..Y.
+c0de835c:	7f47 b1c8 151b f46f 7f2e e041 be2a 6429     G.....o...A.*.)d
+c0de836c:	2f0e 90e3 5ad9 a83b 443d 205b 302a 1a5d     ./...Z;.=D[ *0].
+c0de837c:	596c a91f e426 6b67 783e e5be 9c54 3bb0     lY..&.gk>x..T..;
+c0de838c:	4b45 ff10 9f01 90fb 8854 281c 971f 9fce     EK......T..(....
+c0de839c:	c4d9 4159 870d ec3b 8965 7d78 9fa6 3c22     ..YA..;.e.x}.."<
+c0de83ac:	cd5e 63d3 6c52 a020 23a8 482b ad49 a594     ^..cRl ..#+HI...
+c0de83bc:	8132 74b1                                   2..t
 
-c0de83e0 <.L__const.handler_cmd_GroupCommitment.binding_factors>:
-c0de83e0:	1101 deb7 bc94 9409 b2cd fd68 edbf d448     ..........h...H.
-c0de83f0:	ea91 d313 1c46 6e31 250b 8221 10ef 9777     ....F.1n.%!...w.
-c0de8400:	e600 1194 c574 0f7d 8054 9b71 5d0f 5c5a     ....t.}.T.q..]Z\
-c0de8410:	8840 039f 293c 1124 ec41 9a84 2c04 443a     @...<)$.A....,:D
-c0de8420:	5a02 efdb 2f3c 250b 5388 73ec 6e3e 9c9d     .Z..</.%.S.s>n..
-c0de8430:	58ff 694a 35f3 5bda 99bd 2ed1 123e 6f63     .XJi.5.[....>.co
+c0de83c0 <.L__const.handler_cmd_GroupCommitment.binding_factors>:
+c0de83c0:	1101 deb7 bc94 9409 b2cd fd68 edbf d448     ..........h...H.
+c0de83d0:	ea91 d313 1c46 6e31 250b 8221 10ef 9777     ....F.1n.%!...w.
+c0de83e0:	e600 1194 c574 0f7d 8054 9b71 5d0f 5c5a     ....t.}.T.q..]Z\
+c0de83f0:	8840 039f 293c 1124 ec41 9a84 2c04 443a     @...<)$.A....,:D
+c0de8400:	5a02 efdb 2f3c 250b 5388 73ec 6e3e 9c9d     .Z..</.%.S.s>n..
+c0de8410:	58ff 694a 35f3 5bda 99bd 2ed1 123e 6f63     .XJi.5.[....>.co
 
-c0de8440 <.L__const.handler_cmd_BindingFactors.commitmentlist_be>:
+c0de8420 <.L__const.handler_cmd_BindingFactors.commitmentlist_be>:
 	...
-c0de845c:	0000 0100 3229 55ae 7136 b0a5 b3d0 6ad2     ....)2.U6q.....j
-c0de846c:	70af 71b5 d876 4698 8c1a 59c1 8bc8 322b     .p.qv..F...Y..+2
-c0de847c:	285e 3734 c325 9954 61af 3e06 e0a9 8a56     ^(47%.T..a.>..V.
-c0de848c:	5641 7b5b e45c c8b0 6ff1 e711 8d18 5867     AV[{\....o....gX
-c0de849c:	27a8 c015 0627 8688 9c97 d30c f064 a97e     .'..'.......d.~.
-c0de84ac:	968c 8229 f399 dcc4 a1f8 b207 8aef c212     ..).............
-c0de84bc:	3713 73b9 ff1f 2fed 8440 7f75 4254 1f95     .7.s.../@.u.TB..
-c0de84cc:	93fe ff81 507b dee5 d9a5 b827 8510 e4e4     ....{P....'.....
-c0de84dc:	a9d0 a0f2 0000 0000 0000 0000 0000 0000     ................
+c0de843c:	0000 0100 3229 55ae 7136 b0a5 b3d0 6ad2     ....)2.U6q.....j
+c0de844c:	70af 71b5 d876 4698 8c1a 59c1 8bc8 322b     .p.qv..F...Y..+2
+c0de845c:	285e 3734 c325 9954 61af 3e06 e0a9 8a56     ^(47%.T..a.>..V.
+c0de846c:	5641 7b5b e45c c8b0 6ff1 e711 8d18 5867     AV[{\....o....gX
+c0de847c:	27a8 c015 0627 8688 9c97 d30c f064 a97e     .'..'.......d.~.
+c0de848c:	968c 8229 f399 dcc4 a1f8 b207 8aef c212     ..).............
+c0de849c:	3713 73b9 ff1f 2fed 8440 7f75 4254 1f95     .7.s.../@.u.TB..
+c0de84ac:	93fe ff81 507b dee5 d9a5 b827 8510 e4e4     ....{P....'.....
+c0de84bc:	a9d0 a0f2 0000 0000 0000 0000 0000 0000     ................
 	...
-c0de84fc:	0000 0200 6e08 505e f749 39a9 eaaa d6a7     .....n^PI..9....
-c0de850c:	e3f9 337b 5355 e57a 1a1d 3435 cbd4 78ab     ..{3USz...54...x
-c0de851c:	8704 dd59 b701 ed2a 70c4 1124 6d74 4766     ..Y...*..p$.tmfG
-c0de852c:	f98d 27bb bd42 e44f 5a4c cd87 13ed 873b     ...'B.O.LZ....;.
-c0de853c:	3c80 3673 1813 8555 19fd 1c1c 5201 6d46     .<s6..U......RFm
-c0de854c:	dffe 3a93 4caf 3e26 abec 8e2f 71f6 d0e8     ...:.L&>../..q..
-c0de855c:	ecf8 f94c 212b b4ad 53a1 e230 f480 640e     ..L.+!...S0....d
-c0de856c:	aa94 ac4d 5fc4 3176 1b81 12bc 968a bd07     ..M.._v1........
-c0de857c:	2f0e d194 0000 0000 0000 0000 0000 0000     ./..............
+c0de84dc:	0000 0200 6e08 505e f749 39a9 eaaa d6a7     .....n^PI..9....
+c0de84ec:	e3f9 337b 5355 e57a 1a1d 3435 cbd4 78ab     ..{3USz...54...x
+c0de84fc:	8704 dd59 b701 ed2a 70c4 1124 6d74 4766     ..Y...*..p$.tmfG
+c0de850c:	f98d 27bb bd42 e44f 5a4c cd87 13ed 873b     ...'B.O.LZ....;.
+c0de851c:	3c80 3673 1813 8555 19fd 1c1c 5201 6d46     .<s6..U......RFm
+c0de852c:	dffe 3a93 4caf 3e26 abec 8e2f 71f6 d0e8     ...:.L&>../..q..
+c0de853c:	ecf8 f94c 212b b4ad 53a1 e230 f480 640e     ..L.+!...S0....d
+c0de854c:	aa94 ac4d 5fc4 3176 1b81 12bc 968a bd07     ..M.._v1........
+c0de855c:	2f0e d194 0000 0000 0000 0000 0000 0000     ./..............
 	...
-c0de859c:	0000 0300 1e07 30db 7c36 faf4 b8bb 6324     .......06|....$c
-c0de85ac:	9eed 7ba4 68cf 3b9e 9647 bd97 0086 77ff     ...{.h.;G......w
-c0de85bc:	e3de 6027 0b28 4fd3 6fb5 7c64 002a 8c05     ..'`(..O.od|*...
-c0de85cc:	10db 07f6 e91a f888 bb42 a700 ee4e 13e7     ........B...N...
-c0de85dc:	53ba c7e4 ce18 64ed ad9b b4ef df2f bd56     .S.....d..../.V.
-c0de85ec:	f7c6 bae1 6dc3 49a2 1141 2f01 337a 9851     .....m.IA../z3Q.
-c0de85fc:	f77b 6ed3 0c14 a8f9 5675 130f 5844 0ec4     {..n....uV..DX..
-c0de860c:	c881 1f0d 459c 2964 8469 00c9 ac70 f0b9     .....Ed)i...p...
-c0de861c:	a0c2 7523                                   ..#u
+c0de857c:	0000 0300 1e07 30db 7c36 faf4 b8bb 6324     .......06|....$c
+c0de858c:	9eed 7ba4 68cf 3b9e 9647 bd97 0086 77ff     ...{.h.;G......w
+c0de859c:	e3de 6027 0b28 4fd3 6fb5 7c64 002a 8c05     ..'`(..O.od|*...
+c0de85ac:	10db 07f6 e91a f888 bb42 a700 ee4e 13e7     ........B...N...
+c0de85bc:	53ba c7e4 ce18 64ed ad9b b4ef df2f bd56     .S.....d..../.V.
+c0de85cc:	f7c6 bae1 6dc3 49a2 1141 2f01 337a 9851     .....m.IA../z3Q.
+c0de85dc:	f77b 6ed3 0c14 a8f9 5675 130f 5844 0ec4     {..n....uV..DX..
+c0de85ec:	c881 1f0d 459c 2964 8469 00c9 ac70 f0b9     .....Ed)i...p...
+c0de85fc:	a0c2 7523                                   ..#u
 
-c0de8620 <settingContents>:
-c0de8620:	0000 0000 863c c0de 0001 0000               ....<.......
+c0de8600 <settingContents>:
+c0de8600:	0000 0000 861c c0de 0001 0000               ............
 
-c0de862c <infoList>:
-c0de862c:	8674 c0de 867c c0de 0000 0000 0002 0000     t...|...........
+c0de860c <infoList>:
+c0de860c:	8654 c0de 865c c0de 0000 0000 0002 0000     T...\...........
 
-c0de863c <contents>:
-c0de863c:	0007 0000 0344 da7a 0002 0000 0000 0000     ....D.z.........
+c0de861c <contents>:
+c0de861c:	0007 0000 0344 da7a 0002 0000 0000 0000     ....D.z.........
 	...
-c0de8670:	1859 c0de                                   Y...
+c0de8650:	1859 c0de                                   Y...
 
-c0de8674 <INFO_TYPES>:
-c0de8674:	7ba4 c0de 7af9 c0de                         .{...z..
+c0de8654 <INFO_TYPES>:
+c0de8654:	7b80 c0de 7ad5 c0de                         .{...z..
 
-c0de867c <INFO_CONTENTS>:
-c0de867c:	7a1c c0de 7ce7 c0de                         .z...|..
+c0de865c <INFO_CONTENTS>:
+c0de865c:	79f8 c0de 7cbb c0de                         .y...|..
 
-c0de8684 <.L__const.EddsaPoseidon_Sign_final.big_n>:
+c0de8664 <.L__const.EddsaPoseidon_Sign_final.big_n>:
 	...
-c0de86a4:	0c06 ce89 265c 0534 0a37 b608 30d0 0b2b     ....\&4.7....0+.
-c0de86b4:	3eab b8ed 2039 0aee 7267 dc97 2139 f126     .>..9 ..gr..9!&.
+c0de8684:	0c06 ce89 265c 0534 0a37 b608 30d0 0b2b     ....\&4.7....0+.
+c0de8694:	3eab b8ed 2039 0aee 7267 dc97 2139 f126     .>..9 ..gr..9!&.
 
-c0de86c4 <.L__const.Poseidon_alloc_init.MixColumn>:
-c0de86c4:	4612 f866 6105 59ed f216 70f0 bdb1 8c24     .Ff..a.Y...p..$.
-c0de86d4:	536d 4df4 3d27 6a95 870c 17b9 2a69 184d     mS.M'=.j....i*M.
-c0de86e4:	9211 024f 19fd 92b0 aa55 cfa1 ea46 1805     ..O.....U...F...
-c0de86f4:	d7e3 eebf 74f4 6021 9194 1d01 bdb0 020b     .....t!`........
-c0de8704:	7f24 f0a7 3022 194a ff94 5450 c256 1e20     $..."0J...PTV. .
-c0de8714:	b7f9 3617 9894 ffd3 44ce 0166 9ded 45f8     ...6.....Df....E
-c0de8724:	fd03 197b 2cef 1f86 f722 f87f f510 274e     ..{..,..".....N'
-c0de8734:	c97b b74e 026c 9dd7 6b98 dce3 05df 3f1c     {.N.l....k.....?
-c0de8744:	bd18 2341 3e9c 5771 679a 4374 ffec 55bd     ..A#.>qW.gtC...U
-c0de8754:	815a eeee 93a6 a652 678b 56c8 0c3c 062a     Z.....R..g.V<.*.
-c0de8764:	782d a5c3 8dd2 ffe9 bf35 250a 3576 6e19     -x......5..%v5.n
-c0de8774:	3057 7fca 4940 7732 8c07 5dd7 b4a8 dceb     W0..@I2w...]....
-c0de8784:	510a 5c4a 7f22 ec4c df95 29a0 dde8 4c12     .QJ\".L....)...L
-c0de8794:	8934 a45a b26b 097c f311 0d78 1550 0a54     4.Z.k.|...x.P.T.
-c0de87a4:	2e19 d116 957d 256b 857b 52a6 fdee eef2     ....}.k%{..R....
-c0de87b4:	5809 ac9e e85b 1509 5777 d223 1dcb 6da0     .X..[...wW#....m
-c0de87c4:	8c29 c1e0 11e3 b93b c735 8e05 7277 33b5     ).....;.5...wr.3
-c0de87d4:	aab1 b09d 92c0 dc6b 1789 60e5 a35c 10ac     ......k....`\...
-c0de87e4:	4c09 e8b4 2136 d2af e471 c71b 2717 15f0     .L..6!..q....'..
-c0de87f4:	bd8e 2261 ac39 699d 178b 4bfe 5be0 c87f     ..a"9..i...K.[..
-c0de8804:	d803 3980 e95b 273c 49d6 5faf 42d1 6be7     ...9[.<'.I._.B.k
-c0de8814:	9133 b88c 1d84 285a 3b17 cfd5 327d 9187     3.....Z(.;..}2..
-c0de8824:	ee28 6bae 6658 68ad 43e4 afbb 6891 b70d     (..kXf.h.C...h..
-c0de8834:	e2d7 03b3 387e f6fe 421b cccb ceff 81ca     ....~8...B......
-c0de8844:	8b27 9ab4 4e7b ae44 6ea4 f8b0 cb82 2869     '...{ND..n....i(
-c0de8854:	a601 0fe6 5bdd 235c 3cc6 5cd6 e4cc 0afe     .....[\#.<.\....
-c0de8864:	3e06 c1de d8be f531 af06 b68d d648 eafd     .>....1.....H...
-c0de8874:	5314 8845 8b7e ffdc 9010 a135 b6d9 d774     .SE.~.....5...t.
-c0de8884:	ae1b cbf1 0955 26b5 20a4 fb61 6553 997f     ....U..&. a.Se..
-c0de8894:	23b3 0025 55e8 2c19 8cbe 0e94 8c06 5f47     .#%..U.,......G_
-c0de88a4:	2413 4a56 bdc7 e2f9 6421 85e9 7f8d e3a8     .$VJ....!d......
-c0de88b4:	b168 ea65 3dea 4eaf 7eb6 9ce5 f20d d4e5     h.e..=.N.~......
-c0de88c4:	5700 b861 aec6 1acb a48c 4dea 2cfc 7683     .Wa........M.,.v
-c0de88d4:	4a06 804a ce04 a2ed a510 4052 2d56 13dc     .JJ.......R@V-..
-c0de88e4:	c910 83e2 9d15 cb58 b24c 5fe3 83de baa3     ......X.L.._....
-c0de88f4:	dc1f 0028 d92e 3d96 992a 86f1 8a17 8d14     ..(....=*.......
-c0de8904:	390c 9f9e aa67 7040 207a ee3f 0bfb 8b95     .9..g.@pz ?.....
-c0de8914:	adbd c5ce 34ca 1d90 3d25 6a02 1924 a2f6     .....4..%=.j$...
-c0de8924:	3f08 f30d a0f1 1d35 3003 3fec 02f6 8cca     .?....5..0.?....
-c0de8934:	53c3 f6b7 62e7 10c7 8471 7bcd 3442 f649     .S...b..q..{B4I.
-c0de8944:	671a d564 3f94 a7c4 b420 a1c0 db9f 718c     .gd..?.. ......q
-c0de8954:	8419 7230 a587 9b8b 9f5f 585d 2c21 63b2     ..0r...._.]X!,.c
-c0de8964:	1a01 a263 ea6f 87bf 66fa e6bd c26c 925a     ..c.o....f..l.Z.
-c0de8974:	962c 2d38 c676 ffa7 f148 7b53 edea 3a68     ,.8-v...H.S{..h:
-c0de8984:	ca08 647b 7c65 4835 2bf3 5bef ad63 2824     ..{de|5H.+.[c.$(
-c0de8994:	418a b2c0 0951 d29a 947f 3034 3e7e d464     .A..Q.....40~>d.
-c0de89a4:	9901 7082 1e47 6193 5495 b046 b8cd a9be     ...pG..a.TF.....
-c0de89b4:	ec15 7506 cdf1 8d64 b0dc 0343 7a50 8944     ...u..d...C.PzD.
-c0de89c4:	6b1d 5f3d a36e c269 826f 235d 9362 aa3e     .k=_n.i.o.]#b.>.
-c0de89d4:	ea31 ec35 770a fbc1 e0d9 a11c 3e52 3244     1.5..w......R>D2
-c0de89e4:	9e11 88f1 3dbb d3d0 0623 6c97 9419 861e     .....=..#..l....
-c0de89f4:	be64 7e68 697a 2d69 7da2 15a2 f0a6 406d     d.h~zii-.}....m@
-c0de8a04:	9e2d b50a 68c0 df93 d0df 8134 1b38 6ba8     -....h....4.8..k
-c0de8a14:	626e df92 0956 1fd7 642c d9b2 9fa7 9e80     nb..V...,d......
-c0de8a24:	f125 3166 77bf 0f06 a37e 8740 25c0 13bf     %.f1.w..~.@..%..
-c0de8a34:	8457 9e31 8cf0 2eda 4131 e09e 29a5 58e6     W.1.....1A...).X
-c0de8a44:	4c14 117a 5ada 5d7c aeab 333f d0fb ad3c     .Lz..Z|]..?3..<.
-c0de8a54:	d186 c58b c794 499a cb7e 9498 b5ed f154     .......I~.....T.
-c0de8a64:	970f 6211 7762 f323 adfe b2ac 0c8b 4c10     ...bbw#........L
-c0de8a74:	f7b8 e54d 7508 a82f c0d7 2adb 3df1 eee8     ..M..u/....*.=..
-c0de8a84:	be24 0051 4395 0662 0add 0bbd bb0c c895     $.Q..Cb.........
-c0de8a94:	ab83 4a30 25a5 b198 93a6 ec06 1a98 8d68     ..0J.%........h.
-c0de8aa4:	1621 e210 4aad 7437 fa26 70df b068 a6c1     !....J7t&..ph...
-c0de8ab4:	99c2 64a1 c1c1 03a6 edea 4894 d070 b9b9     ...d.......Hp...
-c0de8ac4:	a615 987d 4110 f6b1 9ff0 9e3f fdbe 4e86     ..}..A....?....N
-c0de8ad4:	9d77 f03a 5781 6a78 77c0 5e50 ec50 fc79     w.:..Wxj.wP^P.y.
-c0de8ae4:	9304 fa27 d279 128c c8a2 0624 7f94 f077     ..'.y.....$...w.
-c0de8af4:	7567 28b0 6874 13b3 7768 1d70 7cbe 9895     gu.(th..hwp..|..
-c0de8b04:	0923 dc40 23c5 5826 9cff 6929 3f7a 16d4     #.@..#&X..)iz?..
-c0de8b14:	70d1 c9e8 f198 85aa a0de 2dc4 f979 aa51     .p.........-y.Q.
-c0de8b24:	121b 041c d19c 9e15 9028 e007 dac9 9599     ........(.......
-c0de8b34:	4bcc 4cab fb26 8e88 97c3 8a2a 652e 6469     .K.L&.....*..eid
+c0de86a4 <.L__const.Poseidon_alloc_init.MixColumn>:
+c0de86a4:	4612 f866 6105 59ed f216 70f0 bdb1 8c24     .Ff..a.Y...p..$.
+c0de86b4:	536d 4df4 3d27 6a95 870c 17b9 2a69 184d     mS.M'=.j....i*M.
+c0de86c4:	9211 024f 19fd 92b0 aa55 cfa1 ea46 1805     ..O.....U...F...
+c0de86d4:	d7e3 eebf 74f4 6021 9194 1d01 bdb0 020b     .....t!`........
+c0de86e4:	7f24 f0a7 3022 194a ff94 5450 c256 1e20     $..."0J...PTV. .
+c0de86f4:	b7f9 3617 9894 ffd3 44ce 0166 9ded 45f8     ...6.....Df....E
+c0de8704:	fd03 197b 2cef 1f86 f722 f87f f510 274e     ..{..,..".....N'
+c0de8714:	c97b b74e 026c 9dd7 6b98 dce3 05df 3f1c     {.N.l....k.....?
+c0de8724:	bd18 2341 3e9c 5771 679a 4374 ffec 55bd     ..A#.>qW.gtC...U
+c0de8734:	815a eeee 93a6 a652 678b 56c8 0c3c 062a     Z.....R..g.V<.*.
+c0de8744:	782d a5c3 8dd2 ffe9 bf35 250a 3576 6e19     -x......5..%v5.n
+c0de8754:	3057 7fca 4940 7732 8c07 5dd7 b4a8 dceb     W0..@I2w...]....
+c0de8764:	510a 5c4a 7f22 ec4c df95 29a0 dde8 4c12     .QJ\".L....)...L
+c0de8774:	8934 a45a b26b 097c f311 0d78 1550 0a54     4.Z.k.|...x.P.T.
+c0de8784:	2e19 d116 957d 256b 857b 52a6 fdee eef2     ....}.k%{..R....
+c0de8794:	5809 ac9e e85b 1509 5777 d223 1dcb 6da0     .X..[...wW#....m
+c0de87a4:	8c29 c1e0 11e3 b93b c735 8e05 7277 33b5     ).....;.5...wr.3
+c0de87b4:	aab1 b09d 92c0 dc6b 1789 60e5 a35c 10ac     ......k....`\...
+c0de87c4:	4c09 e8b4 2136 d2af e471 c71b 2717 15f0     .L..6!..q....'..
+c0de87d4:	bd8e 2261 ac39 699d 178b 4bfe 5be0 c87f     ..a"9..i...K.[..
+c0de87e4:	d803 3980 e95b 273c 49d6 5faf 42d1 6be7     ...9[.<'.I._.B.k
+c0de87f4:	9133 b88c 1d84 285a 3b17 cfd5 327d 9187     3.....Z(.;..}2..
+c0de8804:	ee28 6bae 6658 68ad 43e4 afbb 6891 b70d     (..kXf.h.C...h..
+c0de8814:	e2d7 03b3 387e f6fe 421b cccb ceff 81ca     ....~8...B......
+c0de8824:	8b27 9ab4 4e7b ae44 6ea4 f8b0 cb82 2869     '...{ND..n....i(
+c0de8834:	a601 0fe6 5bdd 235c 3cc6 5cd6 e4cc 0afe     .....[\#.<.\....
+c0de8844:	3e06 c1de d8be f531 af06 b68d d648 eafd     .>....1.....H...
+c0de8854:	5314 8845 8b7e ffdc 9010 a135 b6d9 d774     .SE.~.....5...t.
+c0de8864:	ae1b cbf1 0955 26b5 20a4 fb61 6553 997f     ....U..&. a.Se..
+c0de8874:	23b3 0025 55e8 2c19 8cbe 0e94 8c06 5f47     .#%..U.,......G_
+c0de8884:	2413 4a56 bdc7 e2f9 6421 85e9 7f8d e3a8     .$VJ....!d......
+c0de8894:	b168 ea65 3dea 4eaf 7eb6 9ce5 f20d d4e5     h.e..=.N.~......
+c0de88a4:	5700 b861 aec6 1acb a48c 4dea 2cfc 7683     .Wa........M.,.v
+c0de88b4:	4a06 804a ce04 a2ed a510 4052 2d56 13dc     .JJ.......R@V-..
+c0de88c4:	c910 83e2 9d15 cb58 b24c 5fe3 83de baa3     ......X.L.._....
+c0de88d4:	dc1f 0028 d92e 3d96 992a 86f1 8a17 8d14     ..(....=*.......
+c0de88e4:	390c 9f9e aa67 7040 207a ee3f 0bfb 8b95     .9..g.@pz ?.....
+c0de88f4:	adbd c5ce 34ca 1d90 3d25 6a02 1924 a2f6     .....4..%=.j$...
+c0de8904:	3f08 f30d a0f1 1d35 3003 3fec 02f6 8cca     .?....5..0.?....
+c0de8914:	53c3 f6b7 62e7 10c7 8471 7bcd 3442 f649     .S...b..q..{B4I.
+c0de8924:	671a d564 3f94 a7c4 b420 a1c0 db9f 718c     .gd..?.. ......q
+c0de8934:	8419 7230 a587 9b8b 9f5f 585d 2c21 63b2     ..0r...._.]X!,.c
+c0de8944:	1a01 a263 ea6f 87bf 66fa e6bd c26c 925a     ..c.o....f..l.Z.
+c0de8954:	962c 2d38 c676 ffa7 f148 7b53 edea 3a68     ,.8-v...H.S{..h:
+c0de8964:	ca08 647b 7c65 4835 2bf3 5bef ad63 2824     ..{de|5H.+.[c.$(
+c0de8974:	418a b2c0 0951 d29a 947f 3034 3e7e d464     .A..Q.....40~>d.
+c0de8984:	9901 7082 1e47 6193 5495 b046 b8cd a9be     ...pG..a.TF.....
+c0de8994:	ec15 7506 cdf1 8d64 b0dc 0343 7a50 8944     ...u..d...C.PzD.
+c0de89a4:	6b1d 5f3d a36e c269 826f 235d 9362 aa3e     .k=_n.i.o.]#b.>.
+c0de89b4:	ea31 ec35 770a fbc1 e0d9 a11c 3e52 3244     1.5..w......R>D2
+c0de89c4:	9e11 88f1 3dbb d3d0 0623 6c97 9419 861e     .....=..#..l....
+c0de89d4:	be64 7e68 697a 2d69 7da2 15a2 f0a6 406d     d.h~zii-.}....m@
+c0de89e4:	9e2d b50a 68c0 df93 d0df 8134 1b38 6ba8     -....h....4.8..k
+c0de89f4:	626e df92 0956 1fd7 642c d9b2 9fa7 9e80     nb..V...,d......
+c0de8a04:	f125 3166 77bf 0f06 a37e 8740 25c0 13bf     %.f1.w..~.@..%..
+c0de8a14:	8457 9e31 8cf0 2eda 4131 e09e 29a5 58e6     W.1.....1A...).X
+c0de8a24:	4c14 117a 5ada 5d7c aeab 333f d0fb ad3c     .Lz..Z|]..?3..<.
+c0de8a34:	d186 c58b c794 499a cb7e 9498 b5ed f154     .......I~.....T.
+c0de8a44:	970f 6211 7762 f323 adfe b2ac 0c8b 4c10     ...bbw#........L
+c0de8a54:	f7b8 e54d 7508 a82f c0d7 2adb 3df1 eee8     ..M..u/....*.=..
+c0de8a64:	be24 0051 4395 0662 0add 0bbd bb0c c895     $.Q..Cb.........
+c0de8a74:	ab83 4a30 25a5 b198 93a6 ec06 1a98 8d68     ..0J.%........h.
+c0de8a84:	1621 e210 4aad 7437 fa26 70df b068 a6c1     !....J7t&..ph...
+c0de8a94:	99c2 64a1 c1c1 03a6 edea 4894 d070 b9b9     ...d.......Hp...
+c0de8aa4:	a615 987d 4110 f6b1 9ff0 9e3f fdbe 4e86     ..}..A....?....N
+c0de8ab4:	9d77 f03a 5781 6a78 77c0 5e50 ec50 fc79     w.:..Wxj.wP^P.y.
+c0de8ac4:	9304 fa27 d279 128c c8a2 0624 7f94 f077     ..'.y.....$...w.
+c0de8ad4:	7567 28b0 6874 13b3 7768 1d70 7cbe 9895     gu.(th..hwp..|..
+c0de8ae4:	0923 dc40 23c5 5826 9cff 6929 3f7a 16d4     #.@..#&X..)iz?..
+c0de8af4:	70d1 c9e8 f198 85aa a0de 2dc4 f979 aa51     .p.........-y.Q.
+c0de8b04:	121b 041c d19c 9e15 9028 e007 dac9 9599     ........(.......
+c0de8b14:	4bcc 4cab fb26 8e88 97c3 8a2a 652e 6469     .K.L&.....*..eid
 
-c0de8b44 <.L__const.zkn_frost_H5_init.contextString_BabyFROST>:
-c0de8b44:	5246 534f 2d54 4445 4142 5942 554a 554a     FROST-EDBABYJUJU
-c0de8b54:	2d42 4c42 4b41 3545 3231 762d 0031 0000     B-BLAKE512-v1...
+c0de8b24 <.L__const.zkn_frost_H5_init.contextString_BabyFROST>:
+c0de8b24:	5246 534f 2d54 4445 4142 5942 554a 554a     FROST-EDBABYJUJU
+c0de8b34:	2d42 4c42 4b41 3545 3231 762d 0031 0000     B-BLAKE512-v1...
 
-c0de8b64 <blindSigningWarning>:
-c0de8b64:	0010 0000 0000 0000 0000 0000 0000 0000     ................
+c0de8b44 <blindSigningWarning>:
+c0de8b44:	0010 0000 0000 0000 0000 0000 0000 0000     ................
 	...
 
-c0de8b8c <g_pcHex>:
-c0de8b8c:	3130 3332 3534 3736 3938 6261 6463 6665     0123456789abcdef
+c0de8b6c <g_pcHex>:
+c0de8b6c:	3130 3332 3534 3736 3938 6261 6463 6665     0123456789abcdef
 
-c0de8b9c <g_pcHex_cap>:
-c0de8b9c:	3130 3332 3534 3736 3938 4241 4443 4645     0123456789ABCDEF
+c0de8b7c <g_pcHex_cap>:
+c0de8b7c:	3130 3332 3534 3736 3938 4241 4443 4645     0123456789ABCDEF
 
-c0de8bac <_etext>:
+c0de8b8c <_etext>:
 	...
 
 c0de8c00 <N_storage_real>:
 	...
 
 c0de8e00 <install_parameters>:
-c0de8e00:	0701 4445 5344 5a41 024b 3005 302e 312e     ..EDDSAZK..0.0.1
-c0de8e10:	6a03 000e 000e 6220 0000 ffff ffff ffff     .j.... b........
-c0de8e20:	ffff ffff ffff ffff ffff effe ffff ffff     ................
-c0de8e30:	96fd df69 ffff d7ff 2143 ff6c ffff c9bb     ..i.....C!l.....
-c0de8e40:	3843 ffef ceff 88de ba98 ff9f dede 9ca8     C8..............
-c0de8e50:	becb deff daee ddaa ffdf eeee cded ffff     ................
-c0de8e60:	fdff ddde ffdf ffff eeff ffee ffff ffff     ................
-c0de8e70:	ffff ffff ffff ffff ffff ffff 0a04 0201     ................
-c0de8e80:	0080 2c00 0080 7323                         ...,..#s
+c0de8e00:	0701 4b5a 4f4e 4858 0257 3005 302e 312e     ..ZKNOXHW..0.0.1
+c0de8e10:	2103 000e 000e 1900 0000 0000 0300 08f0     .!..............
+c0de8e20:	4e40 5281 8fa5 a090 8040 0384 00f0 0000     @N.R....@.......
+c0de8e30:	0000 0400 010a 8002 0000 802c 0000           ..........,....
