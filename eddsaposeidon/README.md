@@ -42,6 +42,17 @@ Then verify the displayed hash is as expected (in case you didn't read first war
 
 eddsaposeidon: 00de7911c076d3e4f6180de947af6bb2950722f3afe5729326d3ce3fe26c164a -->
 
+## TESTING THE SIMPLE SIGNER (SIMON)
+
+Install the required package:
+```
+npm install @ledgerhq/hw-transport-node-hid
+```
+Then,run the following command to sign a message:
+```
+node sign-apdu.js <message_in_hex>
+```
+
 ## TESTING AGAINST POSEIDON CIRCOMLIB
 
 First, go to `js/`:
