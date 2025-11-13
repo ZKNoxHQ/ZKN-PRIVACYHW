@@ -6,6 +6,73 @@ const TransportNodeHid = require("@ledgerhq/hw-transport-node-hid").default;
 
 const fs = require('fs');
 
+// ---------------------------------------------------------
+// Constants
+// ---------------------------------------------------------
+const UINT64_MAX = (2n ** 64n) - 1n;
+const UINT32_MAX = (2n ** 32n) - 1n;
+const UINT16_MAX = (2n ** 16n) - 1n;
+
+// ---------------------------------------------------------
+// write_varint
+// ---------------------------------------------------------
+function writeVarint(n) {
+    if (n < 0xFC) {
+        return Buffer.from([n]);
+    }
+
+    if (n <= Number(UINT16_MAX)) {
+        const b = Buffer.alloc(2);
+        b.writeUInt16LE(n);
+        return Buffer.concat([Buffer.from([0xFD]), b]);
+    }
+
+    if (n <= Number(UINT32_MAX)) {
+        const b = Buffer.alloc(4);
+        b.writeUInt32LE(n);
+        return Buffer.concat([Buffer.from([0xFE]), b]);
+    }
+
+    if (n <= UINT64_MAX) {
+        const b = Buffer.alloc(8);
+        b.writeBigUInt64LE(BigInt(n));
+        return Buffer.concat([Buffer.from([0xFF]), b]);
+    }
+
+    throw new Error("Can't write varint: " + n);
+}
+
+// ---------------------------------------------------------
+// serialize
+// ---------------------------------------------------------
+function serialize(nonce, to, value, memo) {
+    const bNonce = Buffer.alloc(8);
+    bNonce.writeBigUInt64BE(BigInt(nonce));
+
+    const bValue = Buffer.alloc(8);
+    bValue.writeBigUInt64BE(BigInt(value));
+
+    return Buffer.concat([
+        bNonce,
+        to,
+        bValue,
+        writeVarint(memo.length),
+        memo
+    ]);
+}
+
+// ---------------------------------------------------------
+// split_message
+// ---------------------------------------------------------
+function splitMessage(message, maxSize) {
+    const out = [];
+    for (let i = 0; i < message.length; i += maxSize) {
+        out.push(message.slice(i, i + maxSize));
+    }
+    return out;
+}
+
+
 async function SignWithoutSecret() {
     console.time("");
     let transport;
@@ -25,19 +92,42 @@ async function SignWithoutSecret() {
         // Build APDU list for signing
         const apdus = [];
 
-        // 1. Init command
         // For the secret key and public key
         apdus.push({ name: "apdu_get_insecure_secret", command: "E016000015058000002c80002373800000000000000000000000" });
         apdus.push({ name: "apdu_get_insecure_public", command: "E01800000102" });
-        // for the signing command
-        // PYTHON OUTPUT////////////////
-        // First APDU
-        apdus.push({ name: "sign_tx_init", command: "E006008015058000002c80002373800000000000000000000000" });
-        // Intermediate APDU
-        apdus.push({ name: "sign_tx_0", command: "E0060180FF0000000000000001cafecafecafecafecafecafecafecafecafecafe000000000000029afd35010a48656c6c6f2066726f6d205a4b4e4f582e20576520617265206865726520666f7220696d706c656d656e74696e672073656375726520686172647761726520666f7220457468657265756d210a48656c6c6f2066726f6d205a4b4e4f582e20576520617265206865726520666f7220696d706c656d656e74696e672073656375726520686172647761726520666f7220457468657265756d210a48656c6c6f2066726f6d205a4b4e4f582e20576520617265206865726520666f7220696d706c656d656e74696e67207365637572652068617264776172" });
-        // Final APDU
-        apdus.push({ name: "sign_tx_final", command: "E00602005d6520666f7220457468657265756d210a48656c6c6f2066726f6d205a4b4e4f582e20576520617265206865726520666f7220696d706c656d656e74696e672073656375726520686172647761726520666f7220457468657265756d210a" });
-        // PYTHON OUTPUT////////////////
+
+        // ---------------------------------------------------------
+        // Inputs (same as Python)
+        // ---------------------------------------------------------
+
+        const nonce = 1;
+        const to = Buffer.from("cafecafecafecafecafecafecafecafecafecafe", "hex");
+        const value = 666;
+        const memo = Buffer.from(`
+Hello from ZKNOX. We are here for implementing secure hardware for Ethereum!
+Hello from ZKNOX. We are here for implementing secure hardware for Ethereum!
+Hello from ZKNOX. We are here for implementing secure hardware for Ethereum!
+Hello from ZKNOX. We are here for implementing secure hardware for Ethereum!
+`, "ascii");
+
+        const dataToBeSigned = serialize(nonce, to, value, memo);
+
+        // same APDU1 as your Python:
+        const apdu1 = "E006008015058000002c80002373800000000000000000000000";
+
+        apdus.push({ name: "sign_0", command: apdu1 });
+
+        // split message
+        const msgs = splitMessage(dataToBeSigned, 255);
+
+
+        for (let i = 0; i < msgs.length - 1; i++) {
+            const msg = msgs[i];
+            apdus.push({ name: `sign_${i + 1}`, command: `E006${(i + 1).toString(16).padStart(2, "0")}80FF${msg.toString("hex")}` });
+        }
+
+        const last = msgs[msgs.length - 1];
+        apdus.push({ name: `sign_final`, command: `E006${msgs.length.toString(16).padStart(2, "0")}00${last.length.toString(16).padStart(2, "0")}${last.toString("hex")}` });
 
         // Execute all signing APDUs
         for (const { name, command } of apdus) {
