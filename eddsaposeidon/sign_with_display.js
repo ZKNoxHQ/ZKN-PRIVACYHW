@@ -28,12 +28,7 @@ async function SignHash() {
         // For the secret key and public key
         apdus.push({ name: "apdu_get_insecure_secret", command: "E016000015058000002c80002373800000000000000000000000" });
         apdus.push({ name: "apdu_get_insecure_public", command: "E01800000102" });
-        apdus.push({ name: "sign_0", command: "E006008015058000002c80002373800000000000000000000000" });
-        apdus.push({ name: "sign_0", command: "E00601802500000000000000010000000000000000000000000000000000000000000000000000000020" });
-        //
-        // Here we add the transaction address `abcdabcd...abcd`
-        //
-        apdus.push({ name: "sign_0", command: "E0060100206162636461626364616263646162636461626364616263646162636461626364" });
+        apdus.push({ name: "sign", command: "E017000021026162636461626364616263646162636461626364616263646162636461626364" });
 
         // Execute all signing APDUs
         for (const { name, command } of apdus) {
